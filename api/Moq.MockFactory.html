@@ -1,0 +1,937 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MockFactory
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MockFactory
+   ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="Moq">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Moq.MockFactory">
+  
+  
+  <h1 id="Moq_MockFactory" data-uid="Moq.MockFactory" class="text-break">Class MockFactory
+  </h1>
+  <div class="markdown level0 summary"><p>Utility factory class to use to construct multiple
+mocks when consistent verification is
+desired for all of them.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">MockFactory</span></div>
+      <div class="level2"><a class="xref" href="Moq.MockRepository.html">MockRepository</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Moq.html">Moq</a></h6>
+  <h6><strong>Assembly</strong>: Moq.dll</h6>
+  <h5 id="Moq_MockFactory_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[EditorBrowsable(EditorBrowsableState.Never)]
+[Obsolete(&quot;This class has been renamed to MockRepository. MockFactory will be retired in v5.&quot;, false)]
+public class MockFactory</code></pre>
+  </div>
+  <h5 id="Moq_MockFactory_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>If multiple mocks will be created during a test, passing
+the desired <a class="xref" href="Moq.MockBehavior.html">MockBehavior</a> (if different than the
+<a class="xref" href="Moq.MockBehavior.html#Moq_MockBehavior_Default">Default</a> or the one
+passed to the factory constructor) and later verifying each
+mock can become repetitive and tedious.</p>
+<p>
+This factory class helps in that scenario by providing a 
+simplified creation of multiple mocks with a default 
+<a class="xref" href="Moq.MockBehavior.html">MockBehavior</a> (unless overridden by calling
+<a class="xref" href="Moq.MockFactory.html#Moq_MockFactory_Create__1_Moq_MockBehavior_">Create&lt;T&gt;(MockBehavior)</a>) and posterior verification.
+</p>
+</div>
+  <h5 id="Moq_MockFactory_examples"><strong>Examples</strong></h5>
+  <p>The following is a straightforward example on how to
+create and automatically verify strict mocks using a <a class="xref" href="Moq.MockFactory.html">MockFactory</a>:</p>
+<pre><code>var factory = new MockFactory(MockBehavior.Strict);
+
+var foo = factory.Create&lt;IFoo>();
+var bar = factory.Create&lt;IBar>();
+
+// no need to call Verifiable() on the setup 
+// as we&apos;ll be validating all of them anyway.
+foo.Setup(f => f.Do());
+bar.Setup(b => b.Redo());
+
+// exercise the mocks here
+
+factory.VerifyAll(); 
+// At this point all setups are already checked 
+// and an optional MockException might be thrown. 
+// Note also that because the mocks are strict, any invocation 
+// that doesn&apos;t have a matching setup will also throw a MockException.</code></pre>
+<p>The following examples shows how to setup the factory
+to create loose mocks and later verify only verifiable setups:</p>
+<pre><code>var factory = new MockFactory(MockBehavior.Loose);
+
+var foo = factory.Create&lt;IFoo>();
+var bar = factory.Create&lt;IBar>();
+
+// this setup will be verified when we verify the factory
+foo.Setup(f => f.Do()).Verifiable();
+
+// this setup will NOT be verified 
+foo.Setup(f => f.Calculate());
+
+// this setup will be verified when we verify the factory
+bar.Setup(b => b.Redo()).Verifiable();
+
+// exercise the mocks here
+// note that because the mocks are Loose, members 
+// called in the interfaces for which no matching
+// setups exist will NOT throw exceptions, 
+// and will rather return default values.
+
+factory.Verify();
+// At this point verifiable setups are already checked 
+// and an optional MockException might be thrown.</code></pre>
+<p>The following examples shows how to setup the factory with a
+default strict behavior, overriding that default for a
+specific mock:</p>
+<pre><code>var factory = new MockFactory(MockBehavior.Strict);
+
+// this particular one we want loose
+var foo = factory.Create&lt;IFoo>(MockBehavior.Loose);
+var bar = factory.Create&lt;IBar>();
+
+// specify setups
+
+// exercise the mocks here
+
+factory.Verify();</code></pre>
+
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory__ctor_Moq_MockBehavior_.md&amp;value=---%0Auid%3A%20Moq.MockFactory.%23ctor(Moq.MockBehavior)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L114">View Source</a>
+  </span>
+  <a id="Moq_MockFactory__ctor_" data-uid="Moq.MockFactory.#ctor*"></a>
+  <h4 id="Moq_MockFactory__ctor_Moq_MockBehavior_" data-uid="Moq.MockFactory.#ctor(Moq.MockBehavior)">MockFactory(MockBehavior)</h4>
+  <div class="markdown level1 summary"><p>Initializes the factory with the given <code data-dev-comment-type="paramref" class="paramref">defaultBehavior</code>
+for newly created mocks from the factory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MockFactory(MockBehavior defaultBehavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockBehavior.html">MockBehavior</a></td>
+        <td><span class="parametername">defaultBehavior</span></td>
+        <td><p>The behavior to use for mocks created
+using the <a class="xref" href="Moq.MockFactory.html#Moq_MockFactory_Create__1">Create&lt;T&gt;()</a> factory method if not overridden
+by using the <a class="xref" href="Moq.MockFactory.html#Moq_MockFactory_Create__1_Moq_MockBehavior_">Create&lt;T&gt;(MockBehavior)</a> overload.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_CallBase.md&amp;value=---%0Auid%3A%20Moq.MockFactory.CallBase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L125">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_CallBase_" data-uid="Moq.MockFactory.CallBase*"></a>
+  <h4 id="Moq_MockFactory_CallBase" data-uid="Moq.MockFactory.CallBase">CallBase</h4>
+  <div class="markdown level1 summary"><p>Whether the base member virtual implementation will be called
+for mocked classes if no setup is matched. Defaults to <span class="xref">false</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CallBase { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_DefaultValue.md&amp;value=---%0Auid%3A%20Moq.MockFactory.DefaultValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L131">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_DefaultValue_" data-uid="Moq.MockFactory.DefaultValue*"></a>
+  <h4 id="Moq_MockFactory_DefaultValue" data-uid="Moq.MockFactory.DefaultValue">DefaultValue</h4>
+  <div class="markdown level1 summary"><p>Specifies the behavior to use when returning default values for
+unexpected invocations on loose mocks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DefaultValue DefaultValue { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.DefaultValue.html">DefaultValue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_DefaultValueProvider.md&amp;value=---%0Auid%3A%20Moq.MockFactory.DefaultValueProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L159">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_DefaultValueProvider_" data-uid="Moq.MockFactory.DefaultValueProvider*"></a>
+  <h4 id="Moq_MockFactory_DefaultValueProvider" data-uid="Moq.MockFactory.DefaultValueProvider">DefaultValueProvider</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="Moq.DefaultValueProvider.html">DefaultValueProvider</a> instance that will be used
+e. g. to produce default return values for unexpected invocations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DefaultValueProvider DefaultValueProvider { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.DefaultValueProvider.html">DefaultValueProvider</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_Mocks.md&amp;value=---%0Auid%3A%20Moq.MockFactory.Mocks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L169">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_Mocks_" data-uid="Moq.MockFactory.Mocks*"></a>
+  <h4 id="Moq_MockFactory_Mocks" data-uid="Moq.MockFactory.Mocks">Mocks</h4>
+  <div class="markdown level1 summary"><p>Gets the mocks that have been created by this factory and
+that will get verified together.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;Mock&gt; Mocks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Moq.Mock.html">Mock</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_Switches.md&amp;value=---%0Auid%3A%20Moq.MockFactory.Switches%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L175">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_Switches_" data-uid="Moq.MockFactory.Switches*"></a>
+  <h4 id="Moq_MockFactory_Switches" data-uid="Moq.MockFactory.Switches">Switches</h4>
+  <div class="markdown level1 summary"><p>A set of switches that influence how mocks created by this factory will operate.
+You can opt in or out of certain features via this property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Switches Switches { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.Switches.html">Switches</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_Create__1.md&amp;value=---%0Auid%3A%20Moq.MockFactory.Create%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L197">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_Create_" data-uid="Moq.MockFactory.Create*"></a>
+  <h4 id="Moq_MockFactory_Create__1" data-uid="Moq.MockFactory.Create``1">Create&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Creates a new mock with the default <a class="xref" href="Moq.MockBehavior.html">MockBehavior</a>
+specified at factory construction time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mock&lt;T&gt; Create&lt;T&gt;()
+    where T : class</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.Mock-1.html">Mock</a>&lt;T&gt;</td>
+        <td><p>A new <a class="xref" href="Moq.Mock-1.html">Mock&lt;T&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type to mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_MockFactory_Create__1_examples">Examples</h5>
+  <pre><code>var factory = new MockFactory(MockBehavior.Strict);
+
+var foo = factory.Create&lt;IFoo>();
+// use mock on tests
+
+factory.VerifyAll();</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_Create__1_Moq_MockBehavior_.md&amp;value=---%0Auid%3A%20Moq.MockFactory.Create%60%601(Moq.MockBehavior)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L255">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_Create_" data-uid="Moq.MockFactory.Create*"></a>
+  <h4 id="Moq_MockFactory_Create__1_Moq_MockBehavior_" data-uid="Moq.MockFactory.Create``1(Moq.MockBehavior)">Create&lt;T&gt;(MockBehavior)</h4>
+  <div class="markdown level1 summary"><p>Creates a new mock with the given <code data-dev-comment-type="paramref" class="paramref">behavior</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mock&lt;T&gt; Create&lt;T&gt;(MockBehavior behavior)
+    where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockBehavior.html">MockBehavior</a></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>Behavior to use for the mock, which overrides
+the default behavior specified at factory construction time.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.Mock-1.html">Mock</a>&lt;T&gt;</td>
+        <td><p>A new <a class="xref" href="Moq.Mock-1.html">Mock&lt;T&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type to mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_MockFactory_Create__1_Moq_MockBehavior__examples">Examples</h5>
+  <p>The following example shows how to create a mock with a different
+behavior to that specified as the default for the factory:</p>
+<pre><code>var factory = new MockFactory(MockBehavior.Strict);
+
+var foo = factory.Create&lt;IFoo>(MockBehavior.Loose);</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_Create__1_Moq_MockBehavior_System_Object___.md&amp;value=---%0Auid%3A%20Moq.MockFactory.Create%60%601(Moq.MockBehavior%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L285">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_Create_" data-uid="Moq.MockFactory.Create*"></a>
+  <h4 id="Moq_MockFactory_Create__1_Moq_MockBehavior_System_Object___" data-uid="Moq.MockFactory.Create``1(Moq.MockBehavior,System.Object[])">Create&lt;T&gt;(MockBehavior, Object[])</h4>
+  <div class="markdown level1 summary"><p>Creates a new mock with the given <code data-dev-comment-type="paramref" class="paramref">behavior</code>
+and with the given constructor arguments for the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mock&lt;T&gt; Create&lt;T&gt;(MockBehavior behavior, params object[] args)
+    where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockBehavior.html">MockBehavior</a></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>Behavior to use for the mock, which overrides
+the default behavior specified at factory construction time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Constructor arguments for mocked classes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.Mock-1.html">Mock</a>&lt;T&gt;</td>
+        <td><p>A new <a class="xref" href="Moq.Mock-1.html">Mock&lt;T&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type to mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_MockFactory_Create__1_Moq_MockBehavior_System_Object____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The mock will try to find the best match constructor given the
+constructor arguments, and invoke that to initialize the instance.
+This applies only to classes, not interfaces.</p>
+</div>
+  <h5 id="Moq_MockFactory_Create__1_Moq_MockBehavior_System_Object____examples">Examples</h5>
+  <p>The following example shows how to create a mock with a different
+behavior to that specified as the default for the factory, passing
+constructor arguments:</p>
+<pre><code>var factory = new MockFactory(MockBehavior.Default);
+
+var mock = factory.Create&lt;MyBase>(MockBehavior.Strict, &quot;Foo&quot;, 25, true);</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_Create__1_System_Object___.md&amp;value=---%0Auid%3A%20Moq.MockFactory.Create%60%601(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L226">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_Create_" data-uid="Moq.MockFactory.Create*"></a>
+  <h4 id="Moq_MockFactory_Create__1_System_Object___" data-uid="Moq.MockFactory.Create``1(System.Object[])">Create&lt;T&gt;(Object[])</h4>
+  <div class="markdown level1 summary"><p>Creates a new mock with the default <a class="xref" href="Moq.MockBehavior.html">MockBehavior</a>
+specified at factory construction time and with the
+the given constructor arguments for the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mock&lt;T&gt; Create&lt;T&gt;(params object[] args)
+    where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Constructor arguments for mocked classes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.Mock-1.html">Mock</a>&lt;T&gt;</td>
+        <td><p>A new <a class="xref" href="Moq.Mock-1.html">Mock&lt;T&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type to mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_MockFactory_Create__1_System_Object____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The mock will try to find the best match constructor given the
+constructor arguments, and invoke that to initialize the instance.
+This applies only to classes, not interfaces.</p>
+</div>
+  <h5 id="Moq_MockFactory_Create__1_System_Object____examples">Examples</h5>
+  <pre><code>var factory = new MockFactory(MockBehavior.Default);
+
+var mock = factory.Create&lt;MyBase>(&quot;Foo&quot;, 25, true);
+// use mock on tests
+
+factory.Verify();</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_CreateMock__1_Moq_MockBehavior_System_Object___.md&amp;value=---%0Auid%3A%20Moq.MockFactory.CreateMock%60%601(Moq.MockBehavior%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L297">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_CreateMock_" data-uid="Moq.MockFactory.CreateMock*"></a>
+  <h4 id="Moq_MockFactory_CreateMock__1_Moq_MockBehavior_System_Object___" data-uid="Moq.MockFactory.CreateMock``1(Moq.MockBehavior,System.Object[])">CreateMock&lt;T&gt;(MockBehavior, Object[])</h4>
+  <div class="markdown level1 summary"><p>Implements creation of a new mock within the factory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Mock&lt;T&gt; CreateMock&lt;T&gt;(MockBehavior behavior, object[] args)
+    where T : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockBehavior.html">MockBehavior</a></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>The behavior for the new mock.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Optional arguments for the construction of the mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.Mock-1.html">Mock</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type to mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_Verify.md&amp;value=---%0Auid%3A%20Moq.MockFactory.Verify%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L315">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_Verify_" data-uid="Moq.MockFactory.Verify*"></a>
+  <h4 id="Moq_MockFactory_Verify" data-uid="Moq.MockFactory.Verify">Verify()</h4>
+  <div class="markdown level1 summary"><p>Verifies all verifiable setups on all mocks created by this factory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Verify()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>One or more mocks had setups that were not satisfied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_MockFactory_Verify_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Moq.Mock.html#Moq_Mock_Verify">Verify</a>()</div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_VerifyAll.md&amp;value=---%0Auid%3A%20Moq.MockFactory.VerifyAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L325">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_VerifyAll_" data-uid="Moq.MockFactory.VerifyAll*"></a>
+  <h4 id="Moq_MockFactory_VerifyAll" data-uid="Moq.MockFactory.VerifyAll">VerifyAll()</h4>
+  <div class="markdown level1 summary"><p>Verifies all setups on all mocks created by this factory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VerifyAll()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>One or more mocks had setups that were not satisfied.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_MockFactory_VerifyAll_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Moq.Mock.html#Moq_Mock_Verify">Verify</a>()</div>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_VerifyMocks_System_Action_Moq_Mock__.md&amp;value=---%0Auid%3A%20Moq.MockFactory.VerifyMocks(System.Action%7BMoq.Mock%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L348">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_VerifyMocks_" data-uid="Moq.MockFactory.VerifyMocks*"></a>
+  <h4 id="Moq_MockFactory_VerifyMocks_System_Action_Moq_Mock__" data-uid="Moq.MockFactory.VerifyMocks(System.Action{Moq.Mock})">VerifyMocks(Action&lt;Mock&gt;)</h4>
+  <div class="markdown level1 summary"><p>Invokes <code data-dev-comment-type="paramref" class="paramref">verifyAction</code> for each mock
+in <a class="xref" href="Moq.MockFactory.html#Moq_MockFactory_Mocks">Mocks</a>, and accumulates the resulting
+verification exceptions that might be
+thrown from the action.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void VerifyMocks(Action&lt;Mock&gt; verifyAction)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="Moq.Mock.html">Mock</a>&gt;</td>
+        <td><span class="parametername">verifyAction</span></td>
+        <td><p>The action to execute against
+each mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory_VerifyNoOtherCalls.md&amp;value=---%0Auid%3A%20Moq.MockFactory.VerifyNoOtherCalls%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L335">View Source</a>
+  </span>
+  <a id="Moq_MockFactory_VerifyNoOtherCalls_" data-uid="Moq.MockFactory.VerifyNoOtherCalls*"></a>
+  <h4 id="Moq_MockFactory_VerifyNoOtherCalls" data-uid="Moq.MockFactory.VerifyNoOtherCalls">VerifyNoOtherCalls()</h4>
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="Moq.Mock-1.html#Moq_Mock_1_VerifyNoOtherCalls">VerifyNoOtherCalls()</a> on all mocks created by this factory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyNoOtherCalls()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>One or more mocks had invocations that were not verified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_MockFactory_VerifyNoOtherCalls_seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Moq.Mock-1.html#Moq_Mock_1_VerifyNoOtherCalls">VerifyNoOtherCalls()</a></div>
+  </div>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Moq.MockBehavior.html">MockBehavior</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_MockFactory.md&amp;value=---%0Auid%3A%20Moq.MockFactory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/MockFactory.cs/#L98" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

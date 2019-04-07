@@ -1,0 +1,3494 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Mock&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Mock&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="Moq">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Moq.Mock`1">
+  
+  
+  <h1 id="Moq_Mock_1" data-uid="Moq.Mock`1" class="text-break">Class Mock&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a mock implementation of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="Moq.Mock.html">Mock</a></div>
+    <div class="level2"><span class="xref">Mock&lt;T&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Moq.IMock-1.html">IMock</a>&lt;T&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Moq.Mock.html#Moq_Mock_Of__1">Mock.Of&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Moq.Mock.html#Moq_Mock_Of__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___">Mock.Of&lt;T&gt;(Expression&lt;Func&lt;T, Boolean&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Moq.Mock.html#Moq_Mock_Get__1___0_">Mock.Get&lt;T&gt;(T)</a>
+    </div>
+    <div>
+      <a class="xref" href="Moq.Mock.html#Moq_Mock_Verify_Moq_Mock___">Mock.Verify(Mock[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Moq.Mock.html#Moq_Mock_VerifyAll_Moq_Mock___">Mock.VerifyAll(Mock[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Moq.Mock.html#Moq_Mock_DefaultValue">Mock.DefaultValue</a>
+    </div>
+    <div>
+      <a class="xref" href="Moq.Mock.html#Moq_Mock_Invocations">Mock.Invocations</a>
+    </div>
+    <div>
+      <a class="xref" href="Moq.Mock.html#Moq_Mock_Verify">Mock.Verify()</a>
+    </div>
+    <div>
+      <a class="xref" href="Moq.Mock.html#Moq_Mock_VerifyAll">Mock.VerifyAll()</a>
+    </div>
+    <div>
+      <a class="xref" href="Moq.Mock.html#Moq_Mock_As__1">Mock.As&lt;TInterface&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Moq.Mock.html#Moq_Mock_SetReturnsDefault__1___0_">Mock.SetReturnsDefault&lt;TReturn&gt;(TReturn)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Moq.html">Moq</a></h6>
+  <h6><strong>Assembly</strong>: Moq.dll</h6>
+  <h5 id="Moq_Mock_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Mock&lt;T&gt; : Mock, IInterceptor, IFluentInterface, IMock&lt;T&gt; where T : class</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type to mock, which can be an interface or a class.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Any interface type can be used for mocking, but for classes, only abstract and virtual members can be mocked.</p>
+<p>
+  The behavior of the mock with regards to the setups and the actual calls is determined
+  by the optional <a class="xref" href="Moq.MockBehavior.html">MockBehavior</a> that can be passed to the <a class="xref" href="Moq.Mock-1.html#Moq_Mock_1__ctor_Moq_MockBehavior_">Mock(MockBehavior)</a>
+  constructor.
+</p>
+</div>
+  <h5 id="Moq_Mock_1_examples"><strong>Examples</strong></h5>
+  
+<p>The following example shows establishing setups with specific values
+for method invocations:</p>
+<pre><code class="lang-csharp">// Arrange
+var order = new Order(TALISKER, 50);
+var mock = new Mock&lt;IWarehouse&gt;();
+
+mock.Setup(x =&gt; x.HasInventory(TALISKER, 50))
+    .Returns(true);
+
+// Act
+order.Fill(mock.Object);
+
+// Assert
+Assert.True(order.IsFilled);
+</code></pre>
+<p>The following example shows how to use the @It class
+to specify conditions for arguments instead of specific values:</p>
+<pre><code class="lang-csharp">// Arrange
+var order = new Order(TALISKER, 50);
+var mock = new Mock&lt;IWarehouse&gt;();
+
+// shows how to expect a value within a range
+mock.Setup(x =&gt; x.HasInventory(It.IsAny&lt;string&gt;(), It.IsInRange(0, 100, Range.Inclusive)))
+    .Returns(false);
+
+// shows how to throw for unexpected calls.
+mock.Setup(x =&gt; x.Remove(It.IsAny&lt;string&gt;(), It.IsAny&lt;int&gt;()))
+    .Throws(new InvalidOperationException());
+
+// Act
+order.Fill(mock.Object);
+
+// Assert
+Assert.False(order.IsFilled);
+</code></pre>
+
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.#ctor.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L81">View Source</a>
+  </span>
+  <a id="Moq_Mock_1__ctor_" data-uid="Moq.Mock`1.#ctor*"></a>
+  <h4 id="Moq_Mock_1__ctor" data-uid="Moq.Mock`1.#ctor">Mock()</h4>
+  <div class="markdown level1 summary"><p>Initializes an instance of the mock with <a class="xref" href="Moq.MockBehavior.html#Moq_MockBehavior_Default">Default</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mock()</code></pre>
+  </div>
+  <h5 id="Moq_Mock_1__ctor_examples">Examples</h5>
+  
+<pre><code class="lang-csharp">var mock = new Mock&lt;IFormatProvider&gt;();
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.#ctor-behavior.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L105">View Source</a>
+  </span>
+  <a id="Moq_Mock_1__ctor_" data-uid="Moq.Mock`1.#ctor*"></a>
+  <h4 id="Moq_Mock_1__ctor_Moq_MockBehavior_" data-uid="Moq.Mock`1.#ctor(Moq.MockBehavior)">Mock(MockBehavior)</h4>
+  <div class="markdown level1 summary"><p>Initializes an instance of the mock with the specified <a class="xref" href="Moq.MockBehavior.html">MockBehavior</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mock(MockBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockBehavior.html">MockBehavior</a></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>Behavior of the mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1__ctor_Moq_MockBehavior__examples">Examples</h5>
+  
+<pre><code class="lang-csharp">var mock = new Mock&lt;IFormatProvider&gt;(MockBehavior.Loose);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.#ctor-behavior-args.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L120">View Source</a>
+  </span>
+  <a id="Moq_Mock_1__ctor_" data-uid="Moq.Mock`1.#ctor*"></a>
+  <h4 id="Moq_Mock_1__ctor_Moq_MockBehavior_System_Object___" data-uid="Moq.Mock`1.#ctor(Moq.MockBehavior,System.Object[])">Mock(MockBehavior, Object[])</h4>
+  <div class="markdown level1 summary"><p>Initializes an instance of the mock with a specific <a class="xref" href="Moq.MockBehavior.html">MockBehavior</a>
+with the given constructor arguments for the class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mock(MockBehavior behavior, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockBehavior.html">MockBehavior</a></td>
+        <td><span class="parametername">behavior</span></td>
+        <td><p>Behavior of the mock.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Optional constructor arguments if the mocked type is a class.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1__ctor_Moq_MockBehavior_System_Object____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The mock will try to find the best match constructor given the constructor arguments, and
+invoke that to initialize the instance. This applies only to classes, not interfaces.</p>
+</div>
+  <h5 id="Moq_Mock_1__ctor_Moq_MockBehavior_System_Object____examples">Examples</h5>
+  
+<pre><code class="lang-csharp">var mock = new Mock&lt;MyProvider&gt;(MockBehavior.Loose, someArgument, 25);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.#ctor-args.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L96">View Source</a>
+  </span>
+  <a id="Moq_Mock_1__ctor_" data-uid="Moq.Mock`1.#ctor*"></a>
+  <h4 id="Moq_Mock_1__ctor_System_Object___" data-uid="Moq.Mock`1.#ctor(System.Object[])">Mock(Object[])</h4>
+  <div class="markdown level1 summary"><p>Initializes an instance of the mock with <a class="xref" href="Moq.MockBehavior.html#Moq_MockBehavior_Default">Default</a>
+and with the given constructor arguments for the class. (Only valid when <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>
+is a class.)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mock(params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td><p>Optional constructor arguments if the mocked type is a class.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1__ctor_System_Object____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The mock will try to find the best match constructor given the constructor arguments,
+and invoke that to initialize the instance. This applies only for classes, not interfaces.</p>
+</div>
+  <h5 id="Moq_Mock_1__ctor_System_Object____examples">Examples</h5>
+  
+<pre><code class="lang-csharp">var mock = new Mock&lt;MyProvider&gt;(someArgument, 25);
+</code></pre>
+
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Behavior.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Behavior%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L172">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Behavior_" data-uid="Moq.Mock`1.Behavior*"></a>
+  <h4 id="Moq_Mock_1_Behavior" data-uid="Moq.Mock`1.Behavior">Behavior</h4>
+  <div class="markdown level1 summary"><p>Behavior of the mock, according to the value set in the constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override MockBehavior Behavior { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockBehavior.html">MockBehavior</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Moq.Mock.html#Moq_Mock_Behavior">Mock.Behavior</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_CallBase.md&amp;value=---%0Auid%3A%20Moq.Mock%601.CallBase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L175">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_CallBase_" data-uid="Moq.Mock`1.CallBase*"></a>
+  <h4 id="Moq_Mock_1_CallBase" data-uid="Moq.Mock`1.CallBase">CallBase</h4>
+  <div class="markdown level1 summary"><p>Whether the base member virtual implementation will be called for mocked classes
+if no setup is matched. Defaults to <span class="xref">false</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool CallBase { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Moq.Mock.html#Moq_Mock_CallBase">Mock.CallBase</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_DefaultValueProvider.md&amp;value=---%0Auid%3A%20Moq.Mock%601.DefaultValueProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L197">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_DefaultValueProvider_" data-uid="Moq.Mock`1.DefaultValueProvider*"></a>
+  <h4 id="Moq_Mock_1_DefaultValueProvider" data-uid="Moq.Mock`1.DefaultValueProvider">DefaultValueProvider</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the <a class="xref" href="Moq.Mock-1.html#Moq_Mock_1_DefaultValueProvider">DefaultValueProvider</a> instance that will be used
+e. g. to produce default return values for unexpected invocations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override DefaultValueProvider DefaultValueProvider { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.DefaultValueProvider.html">DefaultValueProvider</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Moq.Mock.html#Moq_Mock_DefaultValueProvider">Mock.DefaultValueProvider</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Name.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L226">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Name_" data-uid="Moq.Mock`1.Name*"></a>
+  <h4 id="Moq_Mock_1_Name" data-uid="Moq.Mock`1.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Allows naming of your mocks, so they can be easily identified in error messages
+(e.g. from failed assertions).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Object.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Object%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L215">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Object_" data-uid="Moq.Mock`1.Object*"></a>
+  <h4 id="Moq_Mock_1_Object" data-uid="Moq.Mock`1.Object">Object</h4>
+  <div class="markdown level1 summary"><p>Exposes the mocked object instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual T Object { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Switches.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Switches%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L284">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Switches_" data-uid="Moq.Mock`1.Switches*"></a>
+  <h4 id="Moq_Mock_1_Switches" data-uid="Moq.Mock`1.Switches">Switches</h4>
+  <div class="markdown level1 summary"><p>A set of switches that influence how this mock will operate.
+You can opt in or out of certain features via this property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Switches Switches { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.Switches.html">Switches</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Moq.Mock.html#Moq_Mock_Switches">Mock.Switches</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Expect_System_Linq_Expressions_Expression_System_Action__0___.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Expect(System.Linq.Expressions.Expression%7BSystem.Action%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/Mock.Generic.Legacy.cs/#L24">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Expect_" data-uid="Moq.Mock`1.Expect*"></a>
+  <h4 id="Moq_Mock_1_Expect_System_Linq_Expressions_Expression_System_Action__0___" data-uid="Moq.Mock`1.Expect(System.Linq.Expressions.Expression{System.Action{`0}})">Expect(Expression&lt;Action&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Obsolete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Expect has been renamed to Setup.&quot;, false)]
+[EditorBrowsable(EditorBrowsableState.Never)]
+public ISetup&lt;T&gt; Expect(Expression&lt;Action&lt;T&gt;&gt; expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.ISetup</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Expect__1_System_Linq_Expressions_Expression_System_Func__0___0___.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Expect%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/Mock.Generic.Legacy.cs/#L34">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Expect_" data-uid="Moq.Mock`1.Expect*"></a>
+  <h4 id="Moq_Mock_1_Expect__1_System_Linq_Expressions_Expression_System_Func__0___0___" data-uid="Moq.Mock`1.Expect``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">Expect&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Obsolete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Expect has been renamed to Setup.&quot;, false)]
+[EditorBrowsable(EditorBrowsableState.Never)]
+public ISetup&lt;T, TResult&gt; Expect&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt; expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.ISetup</span>&lt;T, TResult&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_ExpectGet__1_System_Linq_Expressions_Expression_System_Func__0___0___.md&amp;value=---%0Auid%3A%20Moq.Mock%601.ExpectGet%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/Mock.Generic.Legacy.cs/#L44">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_ExpectGet_" data-uid="Moq.Mock`1.ExpectGet*"></a>
+  <h4 id="Moq_Mock_1_ExpectGet__1_System_Linq_Expressions_Expression_System_Func__0___0___" data-uid="Moq.Mock`1.ExpectGet``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">ExpectGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Obsolete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;ExpectGet has been renamed to SetupGet.&quot;, false)]
+[EditorBrowsable(EditorBrowsableState.Never)]
+public ISetupGetter&lt;T, TProperty&gt; ExpectGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt; expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TProperty&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.ISetupGetter</span>&lt;T, TProperty&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_ExpectSet__1_System_Linq_Expressions_Expression_System_Func__0___0___.md&amp;value=---%0Auid%3A%20Moq.Mock%601.ExpectSet%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/Mock.Generic.Legacy.cs/#L54">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_ExpectSet_" data-uid="Moq.Mock`1.ExpectSet*"></a>
+  <h4 id="Moq_Mock_1_ExpectSet__1_System_Linq_Expressions_Expression_System_Func__0___0___" data-uid="Moq.Mock`1.ExpectSet``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">ExpectSet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Obsolete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;ExpectSet has been renamed to SetupSet.&quot;, false)]
+[EditorBrowsable(EditorBrowsableState.Never)]
+public ISetupSetter&lt;T, TProperty&gt; ExpectSet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt; expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TProperty&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.ISetupSetter</span>&lt;T, TProperty&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_ExpectSet__1_System_Linq_Expressions_Expression_System_Func__0___0_____0_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.ExpectSet%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/Mock.Generic.Legacy.cs/#L64">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_ExpectSet_" data-uid="Moq.Mock`1.ExpectSet*"></a>
+  <h4 id="Moq_Mock_1_ExpectSet__1_System_Linq_Expressions_Expression_System_Func__0___0_____0_" data-uid="Moq.Mock`1.ExpectSet``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},``0)">ExpectSet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt;, TProperty)</h4>
+  <div class="markdown level1 summary"><p>Obsolete.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;ExpectSet has been renamed to SetupSet, and the new syntax allows you to pass the value in the expression itself, like f =&gt; f.Value = 25.&quot;, true)]
+[EditorBrowsable(EditorBrowsableState.Never)]
+public ISetupSetter&lt;T, TProperty&gt; ExpectSet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt; expression, TProperty value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TProperty&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TProperty</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.ISetupSetter</span>&lt;T, TProperty&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProperty</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_OnGetObject.md&amp;value=---%0Auid%3A%20Moq.Mock%601.OnGetObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L258">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_OnGetObject_" data-uid="Moq.Mock`1.OnGetObject*"></a>
+  <h4 id="Moq_Mock_1_OnGetObject" data-uid="Moq.Mock`1.OnGetObject">OnGetObject()</h4>
+  <div class="markdown level1 summary"><p>Returns the mocked object value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override object OnGetObject()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Moq.Mock.html#Moq_Mock_OnGetObject">Mock.OnGetObject()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.Raise-action-EventArgs.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L888">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Raise_" data-uid="Moq.Mock`1.Raise*"></a>
+  <h4 id="Moq_Mock_1_Raise_System_Action__0__System_EventArgs_" data-uid="Moq.Mock`1.Raise(System.Action{`0},System.EventArgs)">Raise(Action&lt;T&gt;, EventArgs)</h4>
+  <div class="markdown level1 summary"><p>Raises the event referenced in <code data-dev-comment-type="paramref" class="paramref">eventExpression</code> using the given
+<code data-dev-comment-type="paramref" class="paramref">args</code> argument.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Raise(Action&lt;T&gt; eventExpression, EventArgs args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</td>
+        <td><span class="parametername">eventExpression</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_Raise_System_Action__0__System_EventArgs__examples">Examples</h5>
+  
+<p>The following example shows how to raise a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged">PropertyChanged</a> event:</p>
+<pre><code class="lang-csharp">var mock = new Mock&lt;IViewModel&gt;();
+mock.Raise(x =&gt; x.PropertyChanged -= null, new PropertyChangedEventArgs(&quot;Name&quot;));
+</code></pre>
+<p>This example shows how to invoke an event with a custom event arguments
+class in a view that will cause its corresponding presenter to
+react by changing its state:</p>
+<pre><code class="lang-csharp">var mockView = new Mock&lt;IOrdersView&gt;();
+var presenter = new OrdersPresenter(mockView.Object);
+
+// Check that the presenter has no selection by default
+Assert.Null(presenter.SelectedOrder);
+
+// Raise the event with a specific arguments data
+mockView.Raise(v =&gt; v.SelectionChanged += null, new OrderEventArgs { Order = new Order(&quot;moq&quot;, 500) });
+
+// Now the presenter reacted to the event, and we have a selected order
+Assert.NotNull(presenter.SelectedOrder);
+Assert.Equal(&quot;moq&quot;, presenter.SelectedOrder.ProductName);
+```csharp
+</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">args</code> argument is invalid for the target event invocation,
+or the <code data-dev-comment-type="paramref" class="paramref">eventExpression</code> is not an event attach or detach expression.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.Raise-action-args.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L902">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Raise_" data-uid="Moq.Mock`1.Raise*"></a>
+  <h4 id="Moq_Mock_1_Raise_System_Action__0__System_Object___" data-uid="Moq.Mock`1.Raise(System.Action{`0},System.Object[])">Raise(Action&lt;T&gt;, Object[])</h4>
+  <div class="markdown level1 summary"><p>Raises the event referenced in <code data-dev-comment-type="paramref" class="paramref">eventExpression</code> using the given
+<code data-dev-comment-type="paramref" class="paramref">args</code> argument for a non-<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a>-typed event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Raise(Action&lt;T&gt; eventExpression, params object[] args)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</td>
+        <td><span class="parametername">eventExpression</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_Raise_System_Action__0__System_Object____examples">Examples</h5>
+  
+<p>The following example shows how to raise a custom event that does not adhere to the standard <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a>:</p>
+<pre><code class="lang-csharp">var mock = new Mock&lt;IViewModel&gt;();
+mock.Raise(x =&gt; x.MyEvent -= null, &quot;Name&quot;, bool, 25);
+</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>The <code data-dev-comment-type="paramref" class="paramref">args</code> arguments are invalid for the target event invocation,
+or the <code data-dev-comment-type="paramref" class="paramref">eventExpression</code> is not an event attach or detach expression.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.Setup-void.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L302">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Setup_" data-uid="Moq.Mock`1.Setup*"></a>
+  <h4 id="Moq_Mock_1_Setup_System_Linq_Expressions_Expression_System_Action__0___" data-uid="Moq.Mock`1.Setup(System.Linq.Expressions.Expression{System.Action{`0}})">Setup(Expression&lt;Action&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Specifies a setup on the mocked type for a call to a <span class="xref">langword_csharp_void</span> method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISetup&lt;T&gt; Setup(Expression&lt;Action&lt;T&gt;&gt; expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Lambda expression that specifies the expected method invocation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.ISetup</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_Setup_System_Linq_Expressions_Expression_System_Action__0____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If more than one setup is specified for the same method or property,
+the latest one wins and is the one that will be executed.</p>
+</div>
+  <h5 id="Moq_Mock_1_Setup_System_Linq_Expressions_Expression_System_Action__0____examples">Examples</h5>
+  
+<pre><code class="lang-csharp">var mock = new Mock&lt;IProcessor&gt;();
+mock.Setup(x =&gt; x.Execute(&quot;ping&quot;));
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.Setup-nonvoid.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L320">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Setup_" data-uid="Moq.Mock`1.Setup*"></a>
+  <h4 id="Moq_Mock_1_Setup__1_System_Linq_Expressions_Expression_System_Func__0___0___" data-uid="Moq.Mock`1.Setup``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">Setup&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Specifies a setup on the mocked type for a call to a value returning method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISetup&lt;T, TResult&gt; Setup&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt; expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Lambda expression that specifies the method invocation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.ISetup</span>&lt;T, TResult&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Type of the return value. Typically omitted as it can be inferred from the expression.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_Setup__1_System_Linq_Expressions_Expression_System_Func__0___0____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If more than one setup is specified for the same method or property,
+the latest one wins and is the one that will be executed.</p>
+</div>
+  <h5 id="Moq_Mock_1_Setup__1_System_Linq_Expressions_Expression_System_Func__0___0____examples">Examples</h5>
+  
+<pre><code class="lang-csharp">mock.Setup(x =&gt; x.HasInventory(&quot;Talisker&quot;, 50)).Returns(true);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_SetupAllProperties.md&amp;value=---%0Auid%3A%20Moq.Mock%601.SetupAllProperties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L439">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_SetupAllProperties_" data-uid="Moq.Mock`1.SetupAllProperties*"></a>
+  <h4 id="Moq_Mock_1_SetupAllProperties" data-uid="Moq.Mock`1.SetupAllProperties">SetupAllProperties()</h4>
+  <div class="markdown level1 summary"><p>Specifies that the all properties on the mock should have &quot;property behavior&quot;,
+meaning that setting its value will cause it to be saved and later returned
+when the property is requested. (This is also known as &quot;stubbing&quot;.)</p>
+<p>
+  The default value for each property will be the one generated as specified by
+  the <a class="xref" href="Moq.Mock.html#Moq_Mock_DefaultValue">DefaultValue</a> property for the mock.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mock&lt;T&gt; SetupAllProperties()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.Mock-1.html">Mock</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_SetupAllProperties_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the mock <a class="xref" href="Moq.Mock.html#Moq_Mock_DefaultValue">DefaultValue</a> is set to <a class="xref" href="Moq.DefaultValue.html#Moq_DefaultValue_Mock">Mock</a>,
+the mocked default values will also get all properties setup recursively.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.SetupGet.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L338">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_SetupGet_" data-uid="Moq.Mock`1.SetupGet*"></a>
+  <h4 id="Moq_Mock_1_SetupGet__1_System_Linq_Expressions_Expression_System_Func__0___0___" data-uid="Moq.Mock`1.SetupGet``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">SetupGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Specifies a setup on the mocked type for a call to a property getter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISetupGetter&lt;T, TProperty&gt; SetupGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt; expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TProperty&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Lambda expression that specifies the property getter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.ISetupGetter</span>&lt;T, TProperty&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProperty</span></td>
+        <td><p>Type of the property. Typically omitted as it can be inferred from the expression.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_SetupGet__1_System_Linq_Expressions_Expression_System_Func__0___0____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If more than one setup is set for the same property getter,
+the latest one wins and is the one that will be executed.</p>
+</div>
+  <h5 id="Moq_Mock_1_SetupGet__1_System_Linq_Expressions_Expression_System_Func__0___0____examples">Examples</h5>
+  
+<pre><code class="lang-csharp">mock.SetupGet(x =&gt; x.Suspended)
+    .Returns(true);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.SetupProperty.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L394">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_SetupProperty_" data-uid="Moq.Mock`1.SetupProperty*"></a>
+  <h4 id="Moq_Mock_1_SetupProperty__1_System_Linq_Expressions_Expression_System_Func__0___0___" data-uid="Moq.Mock`1.SetupProperty``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">SetupProperty&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Specifies that the given property should have &quot;property behavior&quot;,
+meaning that setting its value will cause it to be saved and later returned
+when the property is requested. (This is also known as &quot;stubbing&quot;.)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mock&lt;T&gt; SetupProperty&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt; property)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TProperty&gt;&gt;</td>
+        <td><span class="parametername">property</span></td>
+        <td><p>Property expression to stub.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.Mock-1.html">Mock</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProperty</span></td>
+        <td><p>Type of the property, inferred from the property expression (does not need to be specified).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_SetupProperty__1_System_Linq_Expressions_Expression_System_Func__0___0____examples">Examples</h5>
+  
+<p>If you have an interface with an <code>int</code> property <code>Value</code>, you might stub it using the following straightforward call:</p>
+<pre><code class="lang-csharp">var mock = new Mock&lt;IHaveValue&gt;();
+mock.SetupProperty(v =&gt; v.Value);
+</code></pre>
+<p>After the <code>SetupProperty</code> call has been issued, setting and retrieving the object value will behave as expected:</p>
+<pre><code class="lang-csharp">IHaveValue v = mock.Object;
+
+v.Value = 5;
+Assert.Equal(5, v.Value);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.SetupProperty-initial-value.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L414">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_SetupProperty_" data-uid="Moq.Mock`1.SetupProperty*"></a>
+  <h4 id="Moq_Mock_1_SetupProperty__1_System_Linq_Expressions_Expression_System_Func__0___0_____0_" data-uid="Moq.Mock`1.SetupProperty``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},``0)">SetupProperty&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt;, TProperty)</h4>
+  <div class="markdown level1 summary"><p>Specifies that the given property should have &quot;property behavior&quot;,
+meaning that setting its value will cause it to be saved and later returned
+when the property is requested. (This is also known as &quot;stubbing&quot;.)</p>
+<p>
+  This overload allows setting the initial value for the property.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Mock&lt;T&gt; SetupProperty&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt; property, TProperty initialValue)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TProperty&gt;&gt;</td>
+        <td><span class="parametername">property</span></td>
+        <td><p>Property expression to stub.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TProperty</span></td>
+        <td><span class="parametername">initialValue</span></td>
+        <td><p>Initial value for the property.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.Mock-1.html">Mock</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProperty</span></td>
+        <td><p>Type of the property, inferred from the property expression (does not need to be specified).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_SetupProperty__1_System_Linq_Expressions_Expression_System_Func__0___0_____0__examples">Examples</h5>
+  
+<p>If you have an interface with an <code>int</code> property <code>Value</code>, you might stub it using the following straightforward call:</p>
+<pre><code class="lang-csharp">var mock = new Mock&lt;IHaveValue&gt;();
+mock.SetupProperty(v =&gt; v.Value, 5);
+</code></pre>
+<p>After the <code>SetupProperty</code> call has been issued, setting and retrieving the object value will behave as expected:</p>
+<pre><code class="lang-csharp">IHaveValue v = mock.Object;
+
+// Initial value was stored
+Assert.Equal(5, v.Value);
+
+// New value set which changes the initial value
+v.Value = 6;
+Assert.Equal(6, v.Value);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_SetupSequence_System_Linq_Expressions_Expression_System_Action__0___.md&amp;value=---%0Auid%3A%20Moq.Mock%601.SetupSequence(System.Linq.Expressions.Expression%7BSystem.Action%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L458">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_SetupSequence_" data-uid="Moq.Mock`1.SetupSequence*"></a>
+  <h4 id="Moq_Mock_1_SetupSequence_System_Linq_Expressions_Expression_System_Action__0___" data-uid="Moq.Mock`1.SetupSequence(System.Linq.Expressions.Expression{System.Action{`0}})">SetupSequence(Expression&lt;Action&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Performs a sequence of actions, one per call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISetupSequentialAction SetupSequence(Expression&lt;Action&lt;T&gt;&gt; expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.ISetupSequentialAction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_SetupSequence__1_System_Linq_Expressions_Expression_System_Func__0___0___.md&amp;value=---%0Auid%3A%20Moq.Mock%601.SetupSequence%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L448">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_SetupSequence_" data-uid="Moq.Mock`1.SetupSequence*"></a>
+  <h4 id="Moq_Mock_1_SetupSequence__1_System_Linq_Expressions_Expression_System_Func__0___0___" data-uid="Moq.Mock`1.SetupSequence``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">SetupSequence&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Return a sequence of values, once per call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISetupSequentialResult&lt;TResult&gt; SetupSequence&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt; expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.ISetupSequentialResult</span>&lt;TResult&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.SetupSet.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L376">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_SetupSet_" data-uid="Moq.Mock`1.SetupSet*"></a>
+  <h4 id="Moq_Mock_1_SetupSet_System_Action__0__" data-uid="Moq.Mock`1.SetupSet(System.Action{`0})">SetupSet(Action&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Specifies a setup on the mocked type for a call to a property setter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISetup&lt;T&gt; SetupSet(Action&lt;T&gt; setterExpression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</td>
+        <td><span class="parametername">setterExpression</span></td>
+        <td><p>Lambda expression that sets a to a value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.ISetup</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_SetupSet_System_Action__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If more than one setup is set for the same property setter,
+the latest one wins and is the one that will be executed.</p>
+</div>
+  <h5 id="Moq_Mock_1_SetupSet_System_Action__0___examples">Examples</h5>
+  
+<pre><code class="lang-csharp">mock.SetupSet(x =&gt; x.Suspended = true);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.SetupSet-typed.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L359">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_SetupSet_" data-uid="Moq.Mock`1.SetupSet*"></a>
+  <h4 id="Moq_Mock_1_SetupSet__1_System_Action__0__" data-uid="Moq.Mock`1.SetupSet``1(System.Action{`0})">SetupSet&lt;TProperty&gt;(Action&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Specifies a setup on the mocked type for a call to a property setter.</p>
+<p>
+  This overloads allows the use of a callback already typed for the property type.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISetupSetter&lt;T, TProperty&gt; SetupSet&lt;TProperty&gt;(Action&lt;T&gt; setterExpression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</td>
+        <td><span class="parametername">setterExpression</span></td>
+        <td><p>The lambda expression that sets a property to a value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.ISetupSetter</span>&lt;T, TProperty&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProperty</span></td>
+        <td><p>Type of the property. Typically omitted as it can be inferred from the expression.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_SetupSet__1_System_Action__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If more than one setup is set for the same property setter,
+the latest one wins and is the one that will be executed.</p>
+</div>
+  <h5 id="Moq_Mock_1_SetupSet__1_System_Action__0___examples">Examples</h5>
+  
+<pre><code class="lang-csharp">mock.SetupSet(x =&gt; x.Suspended = true);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_ToString.md&amp;value=---%0Auid%3A%20Moq.Mock%601.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L235">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_ToString_" data-uid="Moq.Mock`1.ToString*"></a>
+  <h4 id="Moq_Mock_1_ToString" data-uid="Moq.Mock`1.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Returns the name of the mock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.Verify-expression.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L494">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Verify_" data-uid="Moq.Mock`1.Verify*"></a>
+  <h4 id="Moq_Mock_1_Verify_System_Linq_Expressions_Expression_System_Action__0___" data-uid="Moq.Mock`1.Verify(System.Linq.Expressions.Expression{System.Action{`0}})">Verify(Expression&lt;Action&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a specific invocation matching the given expression was performed on the mock.</p>
+<p>
+  Use in conjunction with the default <a class="xref" href="Moq.MockBehavior.html#Moq_MockBehavior_Loose">Loose</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Verify(Expression&lt;Action&lt;T&gt;&gt; expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_Verify_System_Linq_Expressions_Expression_System_Action__0____examples">Examples</h5>
+  
+<p>This example assumes that the mock has been used, and later we want to verify that a given invocation with specific parameters was performed:</p>
+<pre><code class="lang-csharp">var mock = new Mock&lt;IProcessor&gt;();
+// exercise mock
+//...
+// Will throw if the test code didn't call Execute with a &quot;ping&quot; string argument.
+mock.Verify(proc =&gt; proc.Execute(&quot;ping&quot;));
+</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not performed on the mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Verify_System_Linq_Expressions_Expression_System_Action__0___Moq_Times_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Verify(System.Linq.Expressions.Expression%7BSystem.Action%7B%600%7D%7D%2CMoq.Times)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L512">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Verify_" data-uid="Moq.Mock`1.Verify*"></a>
+  <h4 id="Moq_Mock_1_Verify_System_Linq_Expressions_Expression_System_Action__0___Moq_Times_" data-uid="Moq.Mock`1.Verify(System.Linq.Expressions.Expression{System.Action{`0}},Moq.Times)">Verify(Expression&lt;Action&lt;T&gt;&gt;, Times)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a specific invocation matching the given expression was performed on the mock,
+specifying a failure error message.</p>
+<p>
+  Use in conjunction with the default <a class="xref" href="Moq.MockBehavior.html#Moq_MockBehavior_Loose">Loose</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Verify(Expression&lt;Action&lt;T&gt;&gt; expression, Times times)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Moq.Times.html">Times</a></td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the amount times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Verify_System_Linq_Expressions_Expression_System_Action__0___Moq_Times_System_String_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Verify(System.Linq.Expressions.Expression%7BSystem.Action%7B%600%7D%7D%2CMoq.Times%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L565">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Verify_" data-uid="Moq.Mock`1.Verify*"></a>
+  <h4 id="Moq_Mock_1_Verify_System_Linq_Expressions_Expression_System_Action__0___Moq_Times_System_String_" data-uid="Moq.Mock`1.Verify(System.Linq.Expressions.Expression{System.Action{`0}},Moq.Times,System.String)">Verify(Expression&lt;Action&lt;T&gt;&gt;, Times, String)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a specific invocation matching the given expression was performed on the mock,
+specifying a failure error message.</p>
+<p>
+  Use in conjunction with the default <a class="xref" href="Moq.MockBehavior.html#Moq_MockBehavior_Loose">Loose</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Verify(Expression&lt;Action&lt;T&gt;&gt; expression, Times times, string failMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Moq.Times.html">Times</a></td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">failMessage</span></td>
+        <td><p>Message to show if verification fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the amount times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Verify_System_Linq_Expressions_Expression_System_Action__0___System_Func_Moq_Times__.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Verify(System.Linq.Expressions.Expression%7BSystem.Action%7B%600%7D%7D%2CSystem.Func%7BMoq.Times%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L530">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Verify_" data-uid="Moq.Mock`1.Verify*"></a>
+  <h4 id="Moq_Mock_1_Verify_System_Linq_Expressions_Expression_System_Action__0___System_Func_Moq_Times__" data-uid="Moq.Mock`1.Verify(System.Linq.Expressions.Expression{System.Action{`0}},System.Func{Moq.Times})">Verify(Expression&lt;Action&lt;T&gt;&gt;, Func&lt;Times&gt;)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a specific invocation matching the given expression was performed on the mock,
+specifying a failure error message.</p>
+<p>
+  Use in conjunction with the default <a class="xref" href="Moq.MockBehavior.html#Moq_MockBehavior_Loose">Loose</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Verify(Expression&lt;Action&lt;T&gt;&gt; expression, Func&lt;Times&gt; times)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Moq.Times.html">Times</a>&gt;</td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the amount times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Verify_System_Linq_Expressions_Expression_System_Action__0___System_Func_Moq_Times__System_String_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Verify(System.Linq.Expressions.Expression%7BSystem.Action%7B%600%7D%7D%2CSystem.Func%7BMoq.Times%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L584">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Verify_" data-uid="Moq.Mock`1.Verify*"></a>
+  <h4 id="Moq_Mock_1_Verify_System_Linq_Expressions_Expression_System_Action__0___System_Func_Moq_Times__System_String_" data-uid="Moq.Mock`1.Verify(System.Linq.Expressions.Expression{System.Action{`0}},System.Func{Moq.Times},System.String)">Verify(Expression&lt;Action&lt;T&gt;&gt;, Func&lt;Times&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a specific invocation matching the given expression was performed on the mock,
+specifying a failure error message.</p>
+<p>
+  Use in conjunction with the default <a class="xref" href="Moq.MockBehavior.html#Moq_MockBehavior_Loose">Loose</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Verify(Expression&lt;Action&lt;T&gt;&gt; expression, Func&lt;Times&gt; times, string failMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Moq.Times.html">Times</a>&gt;</td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">failMessage</span></td>
+        <td><p>Message to show if verification fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the amount times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Verify_System_Linq_Expressions_Expression_System_Action__0___System_String_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Verify(System.Linq.Expressions.Expression%7BSystem.Action%7B%600%7D%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L546">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Verify_" data-uid="Moq.Mock`1.Verify*"></a>
+  <h4 id="Moq_Mock_1_Verify_System_Linq_Expressions_Expression_System_Action__0___System_String_" data-uid="Moq.Mock`1.Verify(System.Linq.Expressions.Expression{System.Action{`0}},System.String)">Verify(Expression&lt;Action&lt;T&gt;&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a specific invocation matching the given expression was performed on the mock,
+specifying a failure error message.</p>
+<p>
+  Use in conjunction with the default <a class="xref" href="Moq.MockBehavior.html#Moq_MockBehavior_Loose">Loose</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Verify(Expression&lt;Action&lt;T&gt;&gt; expression, string failMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">failMessage</span></td>
+        <td><p>Message to show if verification fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not performed on the mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.Verify-non-void-expression.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L599">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Verify_" data-uid="Moq.Mock`1.Verify*"></a>
+  <h4 id="Moq_Mock_1_Verify__1_System_Linq_Expressions_Expression_System_Func__0___0___" data-uid="Moq.Mock`1.Verify``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">Verify&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a specific invocation matching the given expression was performed on the mock.</p>
+<p>
+  Use in conjunction with the default <a class="xref" href="Moq.MockBehavior.html#Moq_MockBehavior_Loose">Loose</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Verify&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt; expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Type of return value from the expression.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_Verify__1_System_Linq_Expressions_Expression_System_Func__0___0____examples">Examples</h5>
+  
+<p>This example assumes that the mock has been used, and later we want to verify that a given invocation with specific parameters was performed:</p>
+<pre><code class="lang-csharp">var mock = new Mock&lt;IWarehouse&gt;();
+// exercise mock
+//...
+// Will throw if the test code didn't call HasInventory.
+mock.Verify(warehouse =&gt; warehouse.HasInventory(TALISKER, 50));
+</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not performed on the mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Verify__1_System_Linq_Expressions_Expression_System_Func__0___0___Moq_Times_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Verify%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D%2CMoq.Times)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L617">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Verify_" data-uid="Moq.Mock`1.Verify*"></a>
+  <h4 id="Moq_Mock_1_Verify__1_System_Linq_Expressions_Expression_System_Func__0___0___Moq_Times_" data-uid="Moq.Mock`1.Verify``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},Moq.Times)">Verify&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt;, Times)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a specific invocation matching the given expression was performed on the mock.</p>
+<p>
+  Use in conjunction with the default <a class="xref" href="Moq.MockBehavior.html#Moq_MockBehavior_Loose">Loose</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Verify&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt; expression, Times times)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Moq.Times.html">Times</a></td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Type of return value from the expression.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the amount times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Verify__1_System_Linq_Expressions_Expression_System_Func__0___0___Moq_Times_System_String_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Verify%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D%2CMoq.Times%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L666">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Verify_" data-uid="Moq.Mock`1.Verify*"></a>
+  <h4 id="Moq_Mock_1_Verify__1_System_Linq_Expressions_Expression_System_Func__0___0___Moq_Times_System_String_" data-uid="Moq.Mock`1.Verify``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},Moq.Times,System.String)">Verify&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt;, Times, String)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a specific invocation matching the given expression was performed on the mock,
+specifying a failure error message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Verify&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt; expression, Times times, string failMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Moq.Times.html">Times</a></td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">failMessage</span></td>
+        <td><p>Message to show if verification fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Type of return value from the expression.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the amount of times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_Verify__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Func_Moq_Times__.md&amp;value=---%0Auid%3A%20Moq.Mock%601.Verify%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D%2CSystem.Func%7BMoq.Times%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L635">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Verify_" data-uid="Moq.Mock`1.Verify*"></a>
+  <h4 id="Moq_Mock_1_Verify__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Func_Moq_Times__" data-uid="Moq.Mock`1.Verify``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Func{Moq.Times})">Verify&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt;, Func&lt;Times&gt;)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a specific invocation matching the given expression was performed on the mock.</p>
+<p>
+  Use in conjunction with the default <a class="xref" href="Moq.MockBehavior.html#Moq_MockBehavior_Loose">Loose</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Verify&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt; expression, Func&lt;Times&gt; times)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Moq.Times.html">Times</a>&gt;</td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Type of return value from the expression.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the amount times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.Verify-non-void-expression-message.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L649">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_Verify_" data-uid="Moq.Mock`1.Verify*"></a>
+  <h4 id="Moq_Mock_1_Verify__1_System_Linq_Expressions_Expression_System_Func__0___0___System_String_" data-uid="Moq.Mock`1.Verify``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.String)">Verify&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a specific invocation matching the given expression was performed on the mock,
+specifying a failure error message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Verify&lt;TResult&gt;(Expression&lt;Func&lt;T, TResult&gt;&gt; expression, string failMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">failMessage</span></td>
+        <td><p>Message to show if verification fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Type of return value from the expression.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_Verify__1_System_Linq_Expressions_Expression_System_Func__0___0___System_String__examples">Examples</h5>
+  
+<p>This example assumes that the mock has been used, and later we want to verify that a given invocation with specific parameters was performed:</p>
+<pre><code class="lang-csharp">var mock = new Mock&lt;IWarehouse&gt;();
+// exercise mock
+//...
+// Will throw if the test code didn't call HasInventory.
+mock.Verify(warehouse =&gt; warehouse.HasInventory(TALISKER, 50), &quot;When filling orders, inventory has to be checked&quot;);
+</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not performed on the mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.VerifyGet-expression.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L682">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_VerifyGet_" data-uid="Moq.Mock`1.VerifyGet*"></a>
+  <h4 id="Moq_Mock_1_VerifyGet__1_System_Linq_Expressions_Expression_System_Func__0___0___" data-uid="Moq.Mock`1.VerifyGet``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">VerifyGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a property was read on the mock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt; expression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TProperty&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProperty</span></td>
+        <td><p>Type of the property to verify.
+Typically omitted as it can be inferred from the expression's return type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_VerifyGet__1_System_Linq_Expressions_Expression_System_Func__0___0____examples">Examples</h5>
+  
+<p>This example assumes that the mock has been used, and later we want to verify that a given property was retrieved from it:</p>
+<pre><code class="lang-csharp">var mock = new Mock&lt;IWarehouse&gt;();
+// exercise mock
+//...
+// Will throw if the test code didn't retrieve the IsClosed property.
+mock.VerifyGet(warehouse =&gt; warehouse.IsClosed);
+</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not performed on the mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_VerifyGet__1_System_Linq_Expressions_Expression_System_Func__0___0___Moq_Times_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.VerifyGet%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D%2CMoq.Times)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L699">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_VerifyGet_" data-uid="Moq.Mock`1.VerifyGet*"></a>
+  <h4 id="Moq_Mock_1_VerifyGet__1_System_Linq_Expressions_Expression_System_Func__0___0___Moq_Times_" data-uid="Moq.Mock`1.VerifyGet``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},Moq.Times)">VerifyGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt;, Times)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a property was read on the mock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt; expression, Times times)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TProperty&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Moq.Times.html">Times</a></td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProperty</span></td>
+        <td><p>Type of the property to verify. Typically omitted as it can be inferred from the expression's return type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the amount of times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_VerifyGet__1_System_Linq_Expressions_Expression_System_Func__0___0___Moq_Times_System_String_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.VerifyGet%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D%2CMoq.Times%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L750">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_VerifyGet_" data-uid="Moq.Mock`1.VerifyGet*"></a>
+  <h4 id="Moq_Mock_1_VerifyGet__1_System_Linq_Expressions_Expression_System_Func__0___0___Moq_Times_System_String_" data-uid="Moq.Mock`1.VerifyGet``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},Moq.Times,System.String)">VerifyGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt;, Times, String)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a property was read on the mock, specifying a failure error message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt; expression, Times times, string failMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TProperty&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Moq.Times.html">Times</a></td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">failMessage</span></td>
+        <td><p>Message to show if verification fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProperty</span></td>
+        <td><p>Type of the property to verify. Typically omitted as it can be inferred from the expression's return type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the amount of times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_VerifyGet__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Func_Moq_Times__.md&amp;value=---%0Auid%3A%20Moq.Mock%601.VerifyGet%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D%2CSystem.Func%7BMoq.Times%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L716">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_VerifyGet_" data-uid="Moq.Mock`1.VerifyGet*"></a>
+  <h4 id="Moq_Mock_1_VerifyGet__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Func_Moq_Times__" data-uid="Moq.Mock`1.VerifyGet``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Func{Moq.Times})">VerifyGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt;, Func&lt;Times&gt;)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a property was read on the mock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt; expression, Func&lt;Times&gt; times)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TProperty&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Moq.Times.html">Times</a>&gt;</td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProperty</span></td>
+        <td><p>Type of the property to verify. Typically omitted as it can be inferred from the expression's return type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the amount of times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_VerifyGet__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Func_Moq_Times__System_String_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.VerifyGet%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D%2CSystem.Func%7BMoq.Times%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L768">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_VerifyGet_" data-uid="Moq.Mock`1.VerifyGet*"></a>
+  <h4 id="Moq_Mock_1_VerifyGet__1_System_Linq_Expressions_Expression_System_Func__0___0___System_Func_Moq_Times__System_String_" data-uid="Moq.Mock`1.VerifyGet``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Func{Moq.Times},System.String)">VerifyGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt;, Func&lt;Times&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a property was read on the mock, specifying a failure error message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt; expression, Func&lt;Times&gt; times, string failMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TProperty&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Moq.Times.html">Times</a>&gt;</td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">failMessage</span></td>
+        <td><p>Message to show if verification fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProperty</span></td>
+        <td><p>Type of the property to verify. Typically omitted as it can be inferred from the expression's return type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the amount of times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_VerifyGet__1_System_Linq_Expressions_Expression_System_Func__0___0___System_String_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.VerifyGet%60%601(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2C%60%600%7D%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L732">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_VerifyGet_" data-uid="Moq.Mock`1.VerifyGet*"></a>
+  <h4 id="Moq_Mock_1_VerifyGet__1_System_Linq_Expressions_Expression_System_Func__0___0___System_String_" data-uid="Moq.Mock`1.VerifyGet``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.String)">VerifyGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a property was read on the mock, specifying a failure error message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyGet&lt;TProperty&gt;(Expression&lt;Func&lt;T, TProperty&gt;&gt; expression, string failMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TProperty&gt;&gt;</td>
+        <td><span class="parametername">expression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">failMessage</span></td>
+        <td><p>Message to show if verification fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TProperty</span></td>
+        <td><p>Type of the property to verify.
+Typically omitted as it can be inferred from the expression's return type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not performed on the mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_VerifyNoOtherCalls.md&amp;value=---%0Auid%3A%20Moq.Mock%601.VerifyNoOtherCalls%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L871">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_VerifyNoOtherCalls_" data-uid="Moq.Mock`1.VerifyNoOtherCalls*"></a>
+  <h4 id="Moq_Mock_1_VerifyNoOtherCalls" data-uid="Moq.Mock`1.VerifyNoOtherCalls">VerifyNoOtherCalls()</h4>
+  <div class="markdown level1 summary"><p>Verifies that there were no calls other than those already verified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifyNoOtherCalls()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>There was at least one invocation not previously verified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.VerifySet.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L779">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_VerifySet_" data-uid="Moq.Mock`1.VerifySet*"></a>
+  <h4 id="Moq_Mock_1_VerifySet_System_Action__0__" data-uid="Moq.Mock`1.VerifySet(System.Action{`0})">VerifySet(Action&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a property was set on the mock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifySet(Action&lt;T&gt; setterExpression)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</td>
+        <td><span class="parametername">setterExpression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_VerifySet_System_Action__0___examples">Examples</h5>
+  
+<p>This example assumes that the mock has been used, and later we want to verify that a given property was set on it:</p>
+<pre><code class="lang-csharp">var mock = new Mock&lt;IWarehouse&gt;();
+// exercise mock
+//...
+// Will throw if the test code didn't set the IsClosed property.
+mock.VerifySet(warehouse =&gt; warehouse.IsClosed = true);
+```csharp
+</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not performed on the mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_VerifySet_System_Action__0__Moq_Times_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.VerifySet(System.Action%7B%600%7D%2CMoq.Times)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L795">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_VerifySet_" data-uid="Moq.Mock`1.VerifySet*"></a>
+  <h4 id="Moq_Mock_1_VerifySet_System_Action__0__Moq_Times_" data-uid="Moq.Mock`1.VerifySet(System.Action{`0},Moq.Times)">VerifySet(Action&lt;T&gt;, Times)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a property was set on the mock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifySet(Action&lt;T&gt; setterExpression, Times times)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</td>
+        <td><span class="parametername">setterExpression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Moq.Times.html">Times</a></td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the amount of times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_VerifySet_System_Action__0__Moq_Times_System_String_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.VerifySet(System.Action%7B%600%7D%2CMoq.Times%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L842">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_VerifySet_" data-uid="Moq.Mock`1.VerifySet*"></a>
+  <h4 id="Moq_Mock_1_VerifySet_System_Action__0__Moq_Times_System_String_" data-uid="Moq.Mock`1.VerifySet(System.Action{`0},Moq.Times,System.String)">VerifySet(Action&lt;T&gt;, Times, String)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a property was set on the mock, specifying a failure message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifySet(Action&lt;T&gt; setterExpression, Times times, string failMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</td>
+        <td><span class="parametername">setterExpression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Moq.Times.html">Times</a></td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">failMessage</span></td>
+        <td><p>Message to show if verification fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the same amount of times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_VerifySet_System_Action__0__System_Func_Moq_Times__.md&amp;value=---%0Auid%3A%20Moq.Mock%601.VerifySet(System.Action%7B%600%7D%2CSystem.Func%7BMoq.Times%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L811">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_VerifySet_" data-uid="Moq.Mock`1.VerifySet*"></a>
+  <h4 id="Moq_Mock_1_VerifySet_System_Action__0__System_Func_Moq_Times__" data-uid="Moq.Mock`1.VerifySet(System.Action{`0},System.Func{Moq.Times})">VerifySet(Action&lt;T&gt;, Func&lt;Times&gt;)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a property was set on the mock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifySet(Action&lt;T&gt; setterExpression, Func&lt;Times&gt; times)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</td>
+        <td><span class="parametername">setterExpression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Moq.Times.html">Times</a>&gt;</td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the amount of times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_VerifySet_System_Action__0__System_Func_Moq_Times__System_String_.md&amp;value=---%0Auid%3A%20Moq.Mock%601.VerifySet(System.Action%7B%600%7D%2CSystem.Func%7BMoq.Times%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L859">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_VerifySet_" data-uid="Moq.Mock`1.VerifySet*"></a>
+  <h4 id="Moq_Mock_1_VerifySet_System_Action__0__System_Func_Moq_Times__System_String_" data-uid="Moq.Mock`1.VerifySet(System.Action{`0},System.Func{Moq.Times},System.String)">VerifySet(Action&lt;T&gt;, Func&lt;Times&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a property was set on the mock, specifying a failure message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifySet(Action&lt;T&gt; setterExpression, Func&lt;Times&gt; times, string failMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</td>
+        <td><span class="parametername">setterExpression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="Moq.Times.html">Times</a>&gt;</td>
+        <td><span class="parametername">times</span></td>
+        <td><p>The number of times a method is allowed to be called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">failMessage</span></td>
+        <td><p>Message to show if verification fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not called the same amount of times specified by <code data-dev-comment-type="paramref" class="paramref">times</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.VerifySet-message.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L825">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_VerifySet_" data-uid="Moq.Mock`1.VerifySet*"></a>
+  <h4 id="Moq_Mock_1_VerifySet_System_Action__0__System_String_" data-uid="Moq.Mock`1.VerifySet(System.Action{`0},System.String)">VerifySet(Action&lt;T&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Verifies that a property was set on the mock, specifying a failure message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void VerifySet(Action&lt;T&gt; setterExpression, string failMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</td>
+        <td><span class="parametername">setterExpression</span></td>
+        <td><p>Expression to verify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">failMessage</span></td>
+        <td><p>Message to show if verification fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_Mock_1_VerifySet_System_Action__0__System_String__examples">Examples</h5>
+  
+<p>This example assumes that the mock has been used, and later we want to verify that a given property was set on it:</p>
+<pre><code class="lang-csharp">var mock = new Mock&lt;IWarehouse&gt;();
+// exercise mock
+//...
+// Will throw if the test code didn't set the IsClosed property.
+mock.VerifySet(warehouse =&gt; warehouse.IsClosed = true, &quot;Warehouse should always be closed after the action&quot;);
+</code></pre>
+
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.MockException.html">MockException</a></td>
+        <td><p>The invocation was not performed on the mock.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_Mock_1_When_System_Func_System_Boolean__.md&amp;value=---%0Auid%3A%20Moq.Mock%601.When(System.Func%7BSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Mock.Generic.cs/#L477">View Source</a>
+  </span>
+  <a id="Moq_Mock_1_When_" data-uid="Moq.Mock`1.When*"></a>
+  <h4 id="Moq_Mock_1_When_System_Func_System_Boolean__" data-uid="Moq.Mock`1.When(System.Func{System.Boolean})">When(Func&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Allows setting up a conditional setup. Conditional setups are only matched by an invocation
+when the specified <code data-dev-comment-type="paramref" class="paramref">condition</code> evaluates to <span class="xref">true</span>
+at the time when the invocation occurs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISetupConditionResult&lt;T&gt; When(Func&lt;bool&gt; condition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">condition</span></td>
+        <td><p>The condition that should be checked when a setup is being matched against an invocation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.ISetupConditionResult</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Moq.IMock-1.html">IMock&lt;T&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Moq.MockExtensions.html#Moq_MockExtensions_Reset_Moq_Mock_">MockExtensions.Reset(Mock)</a>
+  </div>
+  <div>
+      <a class="xref" href="Moq.MockExtensions.html#Moq_MockExtensions_ResetCalls_Moq_Mock_">MockExtensions.ResetCalls(Mock)</a>
+  </div>
+  <div>
+      <a class="xref" href="Moq.MockSequenceHelper.html#Moq_MockSequenceHelper_InSequence__1_Moq_Mock___0__Moq_MockSequence_">MockSequenceHelper.InSequence&lt;TMock&gt;(Mock&lt;TMock&gt;, MockSequence)</a>
+  </div>
+  <div>
+      <a class="xref" href="Moq.MockLegacyExtensions.html#Moq_MockLegacyExtensions_SetupSet__2_Moq_Mock___0__System_Linq_Expressions_Expression_System_Func___0___1_____1_">MockLegacyExtensions.SetupSet&lt;T, TProperty&gt;(Mock&lt;T&gt;, Expression&lt;Func&lt;T, TProperty&gt;&gt;, TProperty)</a>
+  </div>
+  <div>
+      <a class="xref" href="Moq.MockLegacyExtensions.html#Moq_MockLegacyExtensions_VerifySet__2_Moq_Mock___0__System_Linq_Expressions_Expression_System_Func___0___1_____1_">MockLegacyExtensions.VerifySet&lt;T, TProperty&gt;(Mock&lt;T&gt;, Expression&lt;Func&lt;T, TProperty&gt;&gt;, TProperty)</a>
+  </div>
+  <div>
+      <a class="xref" href="Moq.MockLegacyExtensions.html#Moq_MockLegacyExtensions_VerifySet__2_Moq_Mock___0__System_Linq_Expressions_Expression_System_Func___0___1_____1_System_String_">MockLegacyExtensions.VerifySet&lt;T, TProperty&gt;(Mock&lt;T&gt;, Expression&lt;Func&lt;T, TProperty&gt;&gt;, TProperty, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Moq.ObsoleteMockExtensions.html#Moq_ObsoleteMockExtensions_SetupSet__2_Moq_Mock___0__System_Linq_Expressions_Expression_System_Func___0___1___">ObsoleteMockExtensions.SetupSet&lt;T, TProperty&gt;(Mock&lt;T&gt;, Expression&lt;Func&lt;T, TProperty&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Moq.ObsoleteMockExtensions.html#Moq_ObsoleteMockExtensions_VerifySet__2_Moq_Mock___0__System_Linq_Expressions_Expression_System_Func___0___1___">ObsoleteMockExtensions.VerifySet&lt;T, TProperty&gt;(Mock&lt;T&gt;, Expression&lt;Func&lt;T, TProperty&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Moq.ObsoleteMockExtensions.html#Moq_ObsoleteMockExtensions_VerifySet__2_Moq_Mock___0__System_Linq_Expressions_Expression_System_Func___0___1___System_String_">ObsoleteMockExtensions.VerifySet&lt;T, TProperty&gt;(Mock&lt;T&gt;, Expression&lt;Func&lt;T, TProperty&gt;&gt;, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Moq.ObsoleteMockExtensions.html#Moq_ObsoleteMockExtensions_VerifySet__2_Moq_Mock___0__System_Linq_Expressions_Expression_System_Func___0___1___Moq_Times_">ObsoleteMockExtensions.VerifySet&lt;T, TProperty&gt;(Mock&lt;T&gt;, Expression&lt;Func&lt;T, TProperty&gt;&gt;, Times)</a>
+  </div>
+  <div>
+      <a class="xref" href="Moq.ObsoleteMockExtensions.html#Moq_ObsoleteMockExtensions_VerifySet__2_Moq_Mock___0__System_Linq_Expressions_Expression_System_Func___0___1___Moq_Times_System_String_">ObsoleteMockExtensions.VerifySet&lt;T, TProperty&gt;(Mock&lt;T&gt;, Expression&lt;Func&lt;T, TProperty&gt;&gt;, Times, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Moq.SequenceExtensions.html#Moq_SequenceExtensions_SetupSequence__2_Moq_Mock___0__System_Linq_Expressions_Expression_System_Func___0___1___">SequenceExtensions.SetupSequence&lt;TMock, TResult&gt;(Mock&lt;TMock&gt;, Expression&lt;Func&lt;TMock, TResult&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Moq.SequenceExtensions.html#Moq_SequenceExtensions_SetupSequence__1_Moq_Mock___0__System_Linq_Expressions_Expression_System_Action___0___">SequenceExtensions.SetupSequence&lt;TMock&gt;(Mock&lt;TMock&gt;, Expression&lt;Action&lt;TMock&gt;&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="Moq.Protected.ProtectedExtension.html#Moq_Protected_ProtectedExtension_Protected__1_Moq_Mock___0__">ProtectedExtension.Protected&lt;T&gt;(Mock&lt;T&gt;)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.Mock`1.example.md/#L2" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/Obsolete/Mock.Generic.Legacy.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

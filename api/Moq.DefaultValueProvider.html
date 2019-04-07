@@ -1,0 +1,408 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DefaultValueProvider
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DefaultValueProvider
+   ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="Moq">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Moq.DefaultValueProvider">
+  
+  
+  <h1 id="Moq_DefaultValueProvider" data-uid="Moq.DefaultValueProvider" class="text-break">Class DefaultValueProvider
+  </h1>
+  <div class="markdown level0 summary"><p><a class="xref" href="Moq.DefaultValueProvider.html">DefaultValueProvider</a> is the abstract base class for default value providers.
+These are responsible for producing e. g. return values when mock methods or properties get invoked unexpectedly.
+In other words, whenever there is no setup that would determine the return value for a particular invocation,
+Moq asks the mock's default value provider to produce a return value.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">DefaultValueProvider</span></div>
+      <div class="level2"><a class="xref" href="Moq.LookupOrFallbackDefaultValueProvider.html">LookupOrFallbackDefaultValueProvider</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Moq.html">Moq</a></h6>
+  <h6><strong>Assembly</strong>: Moq.dll</h6>
+  <h5 id="Moq_DefaultValueProvider_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class DefaultValueProvider</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_DefaultValueProvider__ctor.md&amp;value=---%0Auid%3A%20Moq.DefaultValueProvider.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/DefaultValueProvider.cs/#L33">View Source</a>
+  </span>
+  <a id="Moq_DefaultValueProvider__ctor_" data-uid="Moq.DefaultValueProvider.#ctor*"></a>
+  <h4 id="Moq_DefaultValueProvider__ctor" data-uid="Moq.DefaultValueProvider.#ctor">DefaultValueProvider()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Moq.DefaultValueProvider.html">DefaultValueProvider</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DefaultValueProvider()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_DefaultValueProvider_Empty.md&amp;value=---%0Auid%3A%20Moq.DefaultValueProvider.Empty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/DefaultValueProvider.cs/#L22">View Source</a>
+  </span>
+  <a id="Moq_DefaultValueProvider_Empty_" data-uid="Moq.DefaultValueProvider.Empty*"></a>
+  <h4 id="Moq_DefaultValueProvider_Empty" data-uid="Moq.DefaultValueProvider.Empty">Empty</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Moq.DefaultValueProvider.html">DefaultValueProvider</a> corresponding to <a class="xref" href="Moq.DefaultValue.html#Moq_DefaultValue_Empty">Empty</a>;
+that is, a default value provider returning &quot;empty&quot; values e. g. for collection types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DefaultValueProvider Empty { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.DefaultValueProvider.html">DefaultValueProvider</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_DefaultValueProvider_Mock.md&amp;value=---%0Auid%3A%20Moq.DefaultValueProvider.Mock%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/DefaultValueProvider.cs/#L28">View Source</a>
+  </span>
+  <a id="Moq_DefaultValueProvider_Mock_" data-uid="Moq.DefaultValueProvider.Mock*"></a>
+  <h4 id="Moq_DefaultValueProvider_Mock" data-uid="Moq.DefaultValueProvider.Mock">Mock</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Moq.DefaultValueProvider.html">DefaultValueProvider</a> corresponding to <a class="xref" href="Moq.DefaultValue.html#Moq_DefaultValue_Mock">Mock</a>;
+that is, a default value provider returning mocked objects or &quot;empty&quot; values for unmockable types.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DefaultValueProvider Mock { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Moq.DefaultValueProvider.html">DefaultValueProvider</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_DefaultValueProvider_GetDefaultParameterValue_System_Reflection_ParameterInfo_Moq_Mock_.md&amp;value=---%0Auid%3A%20Moq.DefaultValueProvider.GetDefaultParameterValue(System.Reflection.ParameterInfo%2CMoq.Mock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/DefaultValueProvider.cs/#L68">View Source</a>
+  </span>
+  <a id="Moq_DefaultValueProvider_GetDefaultParameterValue_" data-uid="Moq.DefaultValueProvider.GetDefaultParameterValue*"></a>
+  <h4 id="Moq_DefaultValueProvider_GetDefaultParameterValue_System_Reflection_ParameterInfo_Moq_Mock_" data-uid="Moq.DefaultValueProvider.GetDefaultParameterValue(System.Reflection.ParameterInfo,Moq.Mock)">GetDefaultParameterValue(ParameterInfo, Mock)</h4>
+  <div class="markdown level1 summary"><p>
+  Produces a default argument value for the specified method parameter.
+  May be overridden in derived classes.
+</p>
+<p>
+  By default, this method will delegate to <a class="xref" href="Moq.DefaultValueProvider.html#Moq_DefaultValueProvider_GetDefaultValue_System_Type_Moq_Mock_">GetDefaultValue(Type, Mock)</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual object GetDefaultParameterValue(ParameterInfo parameter, Mock mock)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.parameterinfo">ParameterInfo</a></td>
+        <td><span class="parametername">parameter</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.parameterinfo">ParameterInfo</a> describing the method parameter for which a default argument value should be produced.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Moq.Mock.html">Mock</a></td>
+        <td><span class="parametername">mock</span></td>
+        <td><p>The <a class="xref" href="Moq.Mock.html">Mock</a> on which an unexpected invocation has occurred.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_DefaultValueProvider_GetDefaultParameterValue_System_Reflection_ParameterInfo_Moq_Mock__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Implementations may assume that all parameters have valid, non-<span class="xref">null</span>, non-<span class="xref">langword_csharp_void</span> values.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_DefaultValueProvider_GetDefaultReturnValue_System_Reflection_MethodInfo_Moq_Mock_.md&amp;value=---%0Auid%3A%20Moq.DefaultValueProvider.GetDefaultReturnValue(System.Reflection.MethodInfo%2CMoq.Mock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/DefaultValueProvider.cs/#L91">View Source</a>
+  </span>
+  <a id="Moq_DefaultValueProvider_GetDefaultReturnValue_" data-uid="Moq.DefaultValueProvider.GetDefaultReturnValue*"></a>
+  <h4 id="Moq_DefaultValueProvider_GetDefaultReturnValue_System_Reflection_MethodInfo_Moq_Mock_" data-uid="Moq.DefaultValueProvider.GetDefaultReturnValue(System.Reflection.MethodInfo,Moq.Mock)">GetDefaultReturnValue(MethodInfo, Mock)</h4>
+  <div class="markdown level1 summary"><p>
+  Produces a default return value for the specified method.
+  May be overridden in derived classes.
+</p>
+<p>
+  By default, this method will delegate to <a class="xref" href="Moq.DefaultValueProvider.html#Moq_DefaultValueProvider_GetDefaultValue_System_Type_Moq_Mock_">GetDefaultValue(Type, Mock)</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual object GetDefaultReturnValue(MethodInfo method, Mock mock)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.methodinfo">MethodInfo</a></td>
+        <td><span class="parametername">method</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.methodinfo">MethodInfo</a> describing the method for which a default return value should be produced.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Moq.Mock.html">Mock</a></td>
+        <td><span class="parametername">mock</span></td>
+        <td><p>The <a class="xref" href="Moq.Mock.html">Mock</a> on which an unexpected invocation has occurred.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_DefaultValueProvider_GetDefaultReturnValue_System_Reflection_MethodInfo_Moq_Mock__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Implementations may assume that all parameters have valid, non-<span class="xref">null</span>, non-<span class="xref">langword_csharp_void</span> values.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_DefaultValueProvider_GetDefaultValue_System_Type_Moq_Mock_.md&amp;value=---%0Auid%3A%20Moq.DefaultValueProvider.GetDefaultValue(System.Type%2CMoq.Mock)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/DefaultValueProvider.cs/#L52">View Source</a>
+  </span>
+  <a id="Moq_DefaultValueProvider_GetDefaultValue_" data-uid="Moq.DefaultValueProvider.GetDefaultValue*"></a>
+  <h4 id="Moq_DefaultValueProvider_GetDefaultValue_System_Type_Moq_Mock_" data-uid="Moq.DefaultValueProvider.GetDefaultValue(System.Type,Moq.Mock)">GetDefaultValue(Type, Mock)</h4>
+  <div class="markdown level1 summary"><p>Produces a default value of the specified type.
+Must be overridden in derived classes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract object GetDefaultValue(Type type, Mock mock)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a> of the requested default value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Moq.Mock.html">Mock</a></td>
+        <td><span class="parametername">mock</span></td>
+        <td><p>The <a class="xref" href="Moq.Mock.html">Mock</a> on which an unexpected invocation has occurred.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_DefaultValueProvider_GetDefaultValue_System_Type_Moq_Mock__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Implementations may assume that all parameters have valid, non-<span class="xref">null</span>, non-<span class="xref">langword_csharp_void</span> values.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_DefaultValueProvider.md&amp;value=---%0Auid%3A%20Moq.DefaultValueProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/DefaultValueProvider.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1668 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ReturnsExtensions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ReturnsExtensions
+   ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="Moq">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Moq.ReturnsExtensions">
+  
+  
+  <h1 id="Moq_ReturnsExtensions" data-uid="Moq.ReturnsExtensions" class="text-break">Class ReturnsExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Defines async extension methods on IReturns.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">ReturnsExtensions</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Moq.html">Moq</a></h6>
+  <h6><strong>Assembly</strong>: Moq.dll</h6>
+  <h5 id="Moq_ReturnsExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[EditorBrowsable(EditorBrowsableState.Never)]
+public static class ReturnsExtensions</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1_____1_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ReturnsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.Task%7B%60%601%7D%7D%2C%60%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L26">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ReturnsAsync_" data-uid="Moq.ReturnsExtensions.ReturnsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1_____1_" data-uid="Moq.ReturnsExtensions.ReturnsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.Task{``1}},``1)">ReturnsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, Task&lt;TResult&gt;&gt;, TResult)</h4>
+  <div class="markdown level1 summary"><p>Specifies the value to return from an asynchronous method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ReturnsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, Task&lt;TResult&gt;&gt; mock, TResult value)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td><p>Returns verb which represents the mocked type and the task of return type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to return, or <see longword="null"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td><p>Mocked type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Type of the return value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1_____1_System_TimeSpan_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ReturnsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.Task%7B%60%601%7D%7D%2C%60%601%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L122">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ReturnsAsync_" data-uid="Moq.ReturnsExtensions.ReturnsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1_____1_System_TimeSpan_" data-uid="Moq.ReturnsExtensions.ReturnsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.Task{``1}},``1,System.TimeSpan)">ReturnsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, Task&lt;TResult&gt;&gt;, TResult, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Allows to specify the delayed return value of an asynchronous method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ReturnsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, Task&lt;TResult&gt;&gt; mock, TResult value, TimeSpan delay)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">delay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1_____1_System_TimeSpan_System_TimeSpan_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ReturnsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.Task%7B%60%601%7D%7D%2C%60%601%2CSystem.TimeSpan%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L140">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ReturnsAsync_" data-uid="Moq.ReturnsExtensions.ReturnsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1_____1_System_TimeSpan_System_TimeSpan_" data-uid="Moq.ReturnsExtensions.ReturnsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.Task{``1}},``1,System.TimeSpan,System.TimeSpan)">ReturnsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, Task&lt;TResult&gt;&gt;, TResult, TimeSpan, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Allows to specify the delayed return value of an asynchronous method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ReturnsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, Task&lt;TResult&gt;&gt; mock, TResult value, TimeSpan minDelay, TimeSpan maxDelay)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">minDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">maxDelay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1_____1_System_TimeSpan_System_TimeSpan_System_Random_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ReturnsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.Task%7B%60%601%7D%7D%2C%60%601%2CSystem.TimeSpan%2CSystem.TimeSpan%2CSystem.Random)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L163">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ReturnsAsync_" data-uid="Moq.ReturnsExtensions.ReturnsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1_____1_System_TimeSpan_System_TimeSpan_System_Random_" data-uid="Moq.ReturnsExtensions.ReturnsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.Task{``1}},``1,System.TimeSpan,System.TimeSpan,System.Random)">ReturnsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, Task&lt;TResult&gt;&gt;, TResult, TimeSpan, TimeSpan, Random)</h4>
+  <div class="markdown level1 summary"><p>Allows to specify the delayed return value of an asynchronous method.</p>
+<p>Use the <span class="xref">Moq.ReturnsExtensions.Random</span> argument to pass in (seeded) random generators used across your unit test.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ReturnsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, Task&lt;TResult&gt;&gt; mock, TResult value, TimeSpan minDelay, TimeSpan maxDelay, Random random)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">minDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">maxDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><span class="parametername">random</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1___System_Func___1__.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ReturnsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.Task%7B%60%601%7D%7D%2CSystem.Func%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L50">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ReturnsAsync_" data-uid="Moq.ReturnsExtensions.ReturnsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1___System_Func___1__" data-uid="Moq.ReturnsExtensions.ReturnsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.Task{``1}},System.Func{``1})">ReturnsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, Task&lt;TResult&gt;&gt;, Func&lt;TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Specifies a function that will calculate the value to return from the asynchronous method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ReturnsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, Task&lt;TResult&gt;&gt; mock, Func&lt;TResult&gt; valueFunction)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td><p>Returns verb which represents the mocked type and the task of return type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;TResult&gt;</td>
+        <td><span class="parametername">valueFunction</span></td>
+        <td><p>The function that will calculate the return value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td><p>Mocked type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Type of the return value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1_____1_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ReturnsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.ValueTask%7B%60%601%7D%7D%2C%60%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L38">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ReturnsAsync_" data-uid="Moq.ReturnsExtensions.ReturnsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1_____1_" data-uid="Moq.ReturnsExtensions.ReturnsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.ValueTask{``1}},``1)">ReturnsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt;, TResult)</h4>
+  <div class="markdown level1 summary"><p>Specifies the value to return from an asynchronous method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ReturnsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt; mock, TResult value)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td><p>Returns verb which represents the mocked type and the task of return type</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to return, or <see longword="null"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td><p>Mocked type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Type of the return value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1_____1_System_TimeSpan_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ReturnsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.ValueTask%7B%60%601%7D%7D%2C%60%601%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L131">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ReturnsAsync_" data-uid="Moq.ReturnsExtensions.ReturnsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1_____1_System_TimeSpan_" data-uid="Moq.ReturnsExtensions.ReturnsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.ValueTask{``1}},``1,System.TimeSpan)">ReturnsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt;, TResult, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Allows to specify the delayed return value of an asynchronous method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ReturnsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt; mock, TResult value, TimeSpan delay)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">delay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1_____1_System_TimeSpan_System_TimeSpan_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ReturnsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.ValueTask%7B%60%601%7D%7D%2C%60%601%2CSystem.TimeSpan%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L151">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ReturnsAsync_" data-uid="Moq.ReturnsExtensions.ReturnsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1_____1_System_TimeSpan_System_TimeSpan_" data-uid="Moq.ReturnsExtensions.ReturnsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.ValueTask{``1}},``1,System.TimeSpan,System.TimeSpan)">ReturnsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt;, TResult, TimeSpan, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Allows to specify the delayed return value of an asynchronous method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ReturnsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt; mock, TResult value, TimeSpan minDelay, TimeSpan maxDelay)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">minDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">maxDelay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1_____1_System_TimeSpan_System_TimeSpan_System_Random_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ReturnsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.ValueTask%7B%60%601%7D%7D%2C%60%601%2CSystem.TimeSpan%2CSystem.TimeSpan%2CSystem.Random)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L178">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ReturnsAsync_" data-uid="Moq.ReturnsExtensions.ReturnsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1_____1_System_TimeSpan_System_TimeSpan_System_Random_" data-uid="Moq.ReturnsExtensions.ReturnsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.ValueTask{``1}},``1,System.TimeSpan,System.TimeSpan,System.Random)">ReturnsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt;, TResult, TimeSpan, TimeSpan, Random)</h4>
+  <div class="markdown level1 summary"><p>Allows to specify the delayed return value of an asynchronous method.</p>
+<p>Use the <span class="xref">Moq.ReturnsExtensions.Random</span> argument to pass in (seeded) random generators used across your unit test.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ReturnsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt; mock, TResult value, TimeSpan minDelay, TimeSpan maxDelay, Random random)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">minDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">maxDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><span class="parametername">random</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1___System_Func___1__.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ReturnsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.ValueTask%7B%60%601%7D%7D%2CSystem.Func%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L62">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ReturnsAsync_" data-uid="Moq.ReturnsExtensions.ReturnsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ReturnsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1___System_Func___1__" data-uid="Moq.ReturnsExtensions.ReturnsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.ValueTask{``1}},System.Func{``1})">ReturnsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt;, Func&lt;TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Specifies a function that will calculate the value to return from the asynchronous method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ReturnsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt; mock, Func&lt;TResult&gt; valueFunction)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td><p>Returns verb which represents the mocked type and the task of return type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;TResult&gt;</td>
+        <td><span class="parametername">valueFunction</span></td>
+        <td><p>The function that will calculate the return value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td><p>Mocked type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Type of the return value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ThrowsAsync__1_Moq_Language_IReturns___0_System_Threading_Tasks_Task__System_Exception_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ThrowsAsync%60%601(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.Task%7D%2CSystem.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L73">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ThrowsAsync_" data-uid="Moq.ReturnsExtensions.ThrowsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ThrowsAsync__1_Moq_Language_IReturns___0_System_Threading_Tasks_Task__System_Exception_" data-uid="Moq.ReturnsExtensions.ThrowsAsync``1(Moq.Language.IReturns{``0,System.Threading.Tasks.Task},System.Exception)">ThrowsAsync&lt;TMock&gt;(IReturns&lt;TMock, Task&gt;, Exception)</h4>
+  <div class="markdown level1 summary"><p>Specifies the exception to throw when the asynchronous method is invoked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ThrowsAsync&lt;TMock&gt;(this IReturns&lt;TMock, Task&gt; mock, Exception exception)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td><p>Returns verb which represents the mocked type and the task return type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>Exception instance to throw.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td><p>Mocked type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1___System_Exception_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ThrowsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.Task%7B%60%601%7D%7D%2CSystem.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L90">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ThrowsAsync_" data-uid="Moq.ReturnsExtensions.ThrowsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1___System_Exception_" data-uid="Moq.ReturnsExtensions.ThrowsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.Task{``1}},System.Exception)">ThrowsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, Task&lt;TResult&gt;&gt;, Exception)</h4>
+  <div class="markdown level1 summary"><p>Specifies the exception to throw when the asynchronous method is invoked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ThrowsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, Task&lt;TResult&gt;&gt; mock, Exception exception)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td><p>Returns verb which represents the mocked type and the task of return type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>Exception instance to throw.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td><p>Mocked type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Type of the return value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1___System_Exception_System_TimeSpan_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ThrowsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.Task%7B%60%601%7D%7D%2CSystem.Exception%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L192">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ThrowsAsync_" data-uid="Moq.ReturnsExtensions.ThrowsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1___System_Exception_System_TimeSpan_" data-uid="Moq.ReturnsExtensions.ThrowsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.Task{``1}},System.Exception,System.TimeSpan)">ThrowsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, Task&lt;TResult&gt;&gt;, Exception, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Allows to specify the exception thrown by an asynchronous method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ThrowsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, Task&lt;TResult&gt;&gt; mock, Exception exception, TimeSpan delay)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">exception</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">delay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1___System_Exception_System_TimeSpan_System_TimeSpan_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ThrowsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.Task%7B%60%601%7D%7D%2CSystem.Exception%2CSystem.TimeSpan%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L210">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ThrowsAsync_" data-uid="Moq.ReturnsExtensions.ThrowsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1___System_Exception_System_TimeSpan_System_TimeSpan_" data-uid="Moq.ReturnsExtensions.ThrowsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.Task{``1}},System.Exception,System.TimeSpan,System.TimeSpan)">ThrowsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, Task&lt;TResult&gt;&gt;, Exception, TimeSpan, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Allows to specify the exception thrown by an asynchronous method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ThrowsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, Task&lt;TResult&gt;&gt; mock, Exception exception, TimeSpan minDelay, TimeSpan maxDelay)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">exception</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">minDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">maxDelay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1___System_Exception_System_TimeSpan_System_TimeSpan_System_Random_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ThrowsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.Task%7B%60%601%7D%7D%2CSystem.Exception%2CSystem.TimeSpan%2CSystem.TimeSpan%2CSystem.Random)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L233">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ThrowsAsync_" data-uid="Moq.ReturnsExtensions.ThrowsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_Task___1___System_Exception_System_TimeSpan_System_TimeSpan_System_Random_" data-uid="Moq.ReturnsExtensions.ThrowsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.Task{``1}},System.Exception,System.TimeSpan,System.TimeSpan,System.Random)">ThrowsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, Task&lt;TResult&gt;&gt;, Exception, TimeSpan, TimeSpan, Random)</h4>
+  <div class="markdown level1 summary"><p>Allows to specify the exception thrown by an asynchronous method.</p> 
+<p>Use the <span class="xref">Moq.ReturnsExtensions.Random</span> argument to pass in (seeded) random generators used across your unit test.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ThrowsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, Task&lt;TResult&gt;&gt; mock, Exception exception, TimeSpan minDelay, TimeSpan maxDelay, Random random)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">exception</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">minDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">maxDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><span class="parametername">random</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1___System_Exception_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ThrowsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.ValueTask%7B%60%601%7D%7D%2CSystem.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L107">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ThrowsAsync_" data-uid="Moq.ReturnsExtensions.ThrowsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1___System_Exception_" data-uid="Moq.ReturnsExtensions.ThrowsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.ValueTask{``1}},System.Exception)">ThrowsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt;, Exception)</h4>
+  <div class="markdown level1 summary"><p>Specifies the exception to throw when the asynchronous method is invoked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ThrowsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt; mock, Exception exception)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td><p>Returns verb which represents the mocked type and the task of return type</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>Exception instance to throw.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td><p>Mocked type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td><p>Type of the return value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1___System_Exception_System_TimeSpan_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ThrowsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.ValueTask%7B%60%601%7D%7D%2CSystem.Exception%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L201">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ThrowsAsync_" data-uid="Moq.ReturnsExtensions.ThrowsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1___System_Exception_System_TimeSpan_" data-uid="Moq.ReturnsExtensions.ThrowsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.ValueTask{``1}},System.Exception,System.TimeSpan)">ThrowsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt;, Exception, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Allows to specify the exception thrown by an asynchronous method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ThrowsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt; mock, Exception exception, TimeSpan delay)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">exception</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">delay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1___System_Exception_System_TimeSpan_System_TimeSpan_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ThrowsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.ValueTask%7B%60%601%7D%7D%2CSystem.Exception%2CSystem.TimeSpan%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L221">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ThrowsAsync_" data-uid="Moq.ReturnsExtensions.ThrowsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1___System_Exception_System_TimeSpan_System_TimeSpan_" data-uid="Moq.ReturnsExtensions.ThrowsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.ValueTask{``1}},System.Exception,System.TimeSpan,System.TimeSpan)">ThrowsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt;, Exception, TimeSpan, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Allows to specify the exception thrown by an asynchronous method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ThrowsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt; mock, Exception exception, TimeSpan minDelay, TimeSpan maxDelay)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">exception</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">minDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">maxDelay</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1___System_Exception_System_TimeSpan_System_TimeSpan_System_Random_.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions.ThrowsAsync%60%602(Moq.Language.IReturns%7B%60%600%2CSystem.Threading.Tasks.ValueTask%7B%60%601%7D%7D%2CSystem.Exception%2CSystem.TimeSpan%2CSystem.TimeSpan%2CSystem.Random)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L248">View Source</a>
+  </span>
+  <a id="Moq_ReturnsExtensions_ThrowsAsync_" data-uid="Moq.ReturnsExtensions.ThrowsAsync*"></a>
+  <h4 id="Moq_ReturnsExtensions_ThrowsAsync__2_Moq_Language_IReturns___0_System_Threading_Tasks_ValueTask___1___System_Exception_System_TimeSpan_System_TimeSpan_System_Random_" data-uid="Moq.ReturnsExtensions.ThrowsAsync``2(Moq.Language.IReturns{``0,System.Threading.Tasks.ValueTask{``1}},System.Exception,System.TimeSpan,System.TimeSpan,System.Random)">ThrowsAsync&lt;TMock, TResult&gt;(IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt;, Exception, TimeSpan, TimeSpan, Random)</h4>
+  <div class="markdown level1 summary"><p>Allows to specify the exception thrown by an asynchronous method.</p> 
+<p>Use the <span class="xref">Moq.ReturnsExtensions.Random</span> argument to pass in (seeded) random generators used across your unit test.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReturnsResult&lt;TMock&gt; ThrowsAsync&lt;TMock, TResult&gt;(this IReturns&lt;TMock, ValueTask&lt;TResult&gt;&gt; mock, Exception exception, TimeSpan minDelay, TimeSpan maxDelay, Random random)
+    where TMock : class</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.IReturns</span>&lt;TMock, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;TResult&gt;&gt;</td>
+        <td><span class="parametername">mock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">exception</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">minDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
+        <td><span class="parametername">maxDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.random">Random</a></td>
+        <td><span class="parametername">random</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Moq.Language.Flow.IReturnsResult</span>&lt;TMock&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TMock</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_ReturnsExtensions.md&amp;value=---%0Auid%3A%20Moq.ReturnsExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/ReturnsExtensions.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,820 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class It
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class It
+   ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="Moq">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Moq.It">
+  
+  
+  <h1 id="Moq_It" data-uid="Moq.It" class="text-break">Class It
+  </h1>
+  <div class="markdown level0 summary"><p>Allows the specification of a matching condition for an argument in a method invocation,
+rather than a specific argument value. &quot;It&quot; refers to the argument being matched.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">It</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Moq.html">Moq</a></h6>
+  <h6><strong>Assembly</strong>: Moq.dll</h6>
+  <h5 id="Moq_It_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class It</code></pre>
+  </div>
+  <h5 id="Moq_It_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>This class allows the setup to match a method invocation with an arbitrary value,
+with a value in a specified range, or even one that matches a given predicate.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.It.Is.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/It.cs/#L93">View Source</a>
+  </span>
+  <a id="Moq_It_Is_" data-uid="Moq.It.Is*"></a>
+  <h4 id="Moq_It_Is__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___" data-uid="Moq.It.Is``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">Is&lt;TValue&gt;(Expression&lt;Func&lt;TValue, Boolean&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Matches any value that satisfies the given predicate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue Is&lt;TValue&gt;(Expression&lt;Func&lt;TValue, bool&gt;&gt; match)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TValue, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;&gt;</td>
+        <td><span class="parametername">match</span></td>
+        <td><p>The predicate used to match the method argument.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Type of the argument to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_It_Is__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean____remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Allows the specification of a predicate to perform matching of method call arguments.
+If you keep using the same predicate, you might want to define a custom matcher,
+see <a class="xref" href="Moq.Match.html#Moq_Match_Create__1_System_Predicate___0__System_Linq_Expressions_Expression_System_Func___0___">Create&lt;T&gt;(Predicate&lt;T&gt;, Expression&lt;Func&lt;T&gt;&gt;)</a>.</p>
+</div>
+  <h5 id="Moq_It_Is__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean____examples">Examples</h5>
+  
+<p>This example shows how to return the value <code>1</code> whenever the argument to the <code>Do</code> method is an even number.</p>
+<pre><code class="lang-csharp">mock.Setup(x =&gt; x.Do(It.Is&lt;int&gt;(i =&gt; i % 2 == 0)))
+    .Returns(1);
+</code></pre>
+<p>This example shows how to throw an exception if the argument to the method is a negative number:</p>
+<pre><code class="lang-csharp">mock.Setup(x =&gt;; x.GetUser(It.Is&lt;int&gt;(i =&gt; i &lt; 0)))
+    .Throws(new ArgumentException());
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.It.IsAny.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/It.cs/#L48">View Source</a>
+  </span>
+  <a id="Moq_It_IsAny_" data-uid="Moq.It.IsAny*"></a>
+  <h4 id="Moq_It_IsAny__1" data-uid="Moq.It.IsAny``1">IsAny&lt;TValue&gt;()</h4>
+  <div class="markdown level1 summary"><p>Matches any value of the given <code data-dev-comment-type="typeparamref" class="typeparamref">TValue</code> type.</p>
+<p>
+  Typically used when the actual argument value for a method call is not relevant.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue IsAny&lt;TValue&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Type of the value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_It_IsAny__1_examples">Examples</h5>
+  
+<pre><code class="lang-csharp">// Throws an exception for a call to Remove with any string value.
+mock.Setup(x =&gt; x.Remove(It.IsAny&lt;string&gt;()))
+    .Throws(new InvalidOperationException());
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.It.IsIn-params.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/It.cs/#L145">View Source</a>
+  </span>
+  <a id="Moq_It_IsIn_" data-uid="Moq.It.IsIn*"></a>
+  <h4 id="Moq_It_IsIn__1___0___" data-uid="Moq.It.IsIn``1(``0[])">IsIn&lt;TValue&gt;(TValue[])</h4>
+  <div class="markdown level1 summary"><p>Matches any value that is present in the sequence specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue IsIn&lt;TValue&gt;(params TValue[] items)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TValue[]</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The possible values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Type of the argument to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_It_IsIn__1___0____examples">Examples</h5>
+  
+<p>The following example shows how to expect a method call
+with an integer argument with a value of 1, 2, or 3.</p>
+<pre><code class="lang-csharp">mock.Setup(x =&gt; x.HasInventory(It.IsAny&lt;string&gt;(), It.IsIn(1, 2, 3)))
+    .Returns(false);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.It.IsIn-enumerable.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/It.cs/#L134">View Source</a>
+  </span>
+  <a id="Moq_It_IsIn_" data-uid="Moq.It.IsIn*"></a>
+  <h4 id="Moq_It_IsIn__1_System_Collections_Generic_IEnumerable___0__" data-uid="Moq.It.IsIn``1(System.Collections.Generic.IEnumerable{``0})">IsIn&lt;TValue&gt;(IEnumerable&lt;TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Matches any value that is present in the sequence specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue IsIn&lt;TValue&gt;(IEnumerable&lt;TValue&gt; items)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TValue&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The sequence of possible values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Type of the argument to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_It_IsIn__1_System_Collections_Generic_IEnumerable___0___examples">Examples</h5>
+  
+<p>The following example shows how to expect a method call with an integer argument with value from a list.</p>
+<pre><code class="lang-csharp">var values = new List&lt;int&gt; { 1, 2, 3 };
+
+mock.Setup(x =&gt; x.HasInventory(It.IsAny&lt;string&gt;(), It.IsIn(values)))
+    .Returns(false);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.It.IsInRange.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/It.cs/#L108">View Source</a>
+  </span>
+  <a id="Moq_It_IsInRange_" data-uid="Moq.It.IsInRange*"></a>
+  <h4 id="Moq_It_IsInRange__1___0___0_Moq_Range_" data-uid="Moq.It.IsInRange``1(``0,``0,Moq.Range)">IsInRange&lt;TValue&gt;(TValue, TValue, Range)</h4>
+  <div class="markdown level1 summary"><p>Matches any value that is in the range specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue IsInRange&lt;TValue&gt;(TValue from, TValue to, Range rangeKind)
+    where TValue : IComparable</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>The lower bound of the range.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td><span class="parametername">to</span></td>
+        <td><p>The upper bound of the range.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Moq.Range.html">Range</a></td>
+        <td><span class="parametername">rangeKind</span></td>
+        <td><p>The kind of range. See <a class="xref" href="Moq.Range.html">Range</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Type of the argument to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_It_IsInRange__1___0___0_Moq_Range__examples">Examples</h5>
+  
+<p>The following example shows how to expect a method call with an integer argument within the 0..100 range.</p>
+<pre><code class="lang-csharp">mock.Setup(x =&gt; x.HasInventory(It.IsAny&lt;string&gt;(),
+                               It.IsInRange(0, 100, Range.Inclusive)))
+    .Returns(false);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.It.IsNotIn-params.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/It.cs/#L166">View Source</a>
+  </span>
+  <a id="Moq_It_IsNotIn_" data-uid="Moq.It.IsNotIn*"></a>
+  <h4 id="Moq_It_IsNotIn__1___0___" data-uid="Moq.It.IsNotIn``1(``0[])">IsNotIn&lt;TValue&gt;(TValue[])</h4>
+  <div class="markdown level1 summary"><p>Matches any value that is not found in the sequence specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue IsNotIn&lt;TValue&gt;(params TValue[] items)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TValue[]</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The sequence of disallowed values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Type of the argument to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_It_IsNotIn__1___0____examples">Examples</h5>
+  
+<p>The following example shows how to expect a method call with an integer argument of any value except 1, 2, or 3.</p>
+<pre><code class="lang-csharp">mock.Setup(x =&gt; x.HasInventory(It.IsAny&lt;string&gt;(),
+                               It.IsNotIn(1, 2, 3)))
+    .Returns(false);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.It.IsNotIn-enumerable.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/It.cs/#L155">View Source</a>
+  </span>
+  <a id="Moq_It_IsNotIn_" data-uid="Moq.It.IsNotIn*"></a>
+  <h4 id="Moq_It_IsNotIn__1_System_Collections_Generic_IEnumerable___0__" data-uid="Moq.It.IsNotIn``1(System.Collections.Generic.IEnumerable{``0})">IsNotIn&lt;TValue&gt;(IEnumerable&lt;TValue&gt;)</h4>
+  <div class="markdown level1 summary"><p>Matches any value that is not found in the sequence specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue IsNotIn&lt;TValue&gt;(IEnumerable&lt;TValue&gt; items)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TValue&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td><p>The sequence of disallowed values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Type of the argument to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_It_IsNotIn__1_System_Collections_Generic_IEnumerable___0___examples">Examples</h5>
+  
+<p>The following example shows how to expect a method call with an integer argument with value not found from a list.</p>
+<pre><code class="lang-csharp">var values = new List&lt;int&gt; { 1, 2, 3 };
+
+mock.Setup(x =&gt; x.HasInventory(It.IsAny&lt;string&gt;(),
+                               It.IsNotIn(values)))
+    .Returns(false);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_It_IsNotNull__1.md&amp;value=---%0Auid%3A%20Moq.It.IsNotNull%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/It.cs/#L71">View Source</a>
+  </span>
+  <a id="Moq_It_IsNotNull_" data-uid="Moq.It.IsNotNull*"></a>
+  <h4 id="Moq_It_IsNotNull__1" data-uid="Moq.It.IsNotNull``1">IsNotNull&lt;TValue&gt;()</h4>
+  <div class="markdown level1 summary"><p>Matches any value of the given <code data-dev-comment-type="typeparamref" class="typeparamref">TValue</code> type, except null.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TValue IsNotNull&lt;TValue&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TValue</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TValue</span></td>
+        <td><p>Type of the value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.It.IsRegex.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/It.cs/#L176">View Source</a>
+  </span>
+  <a id="Moq_It_IsRegex_" data-uid="Moq.It.IsRegex*"></a>
+  <h4 id="Moq_It_IsRegex_System_String_" data-uid="Moq.It.IsRegex(System.String)">IsRegex(String)</h4>
+  <div class="markdown level1 summary"><p>Matches a string argument if it matches the given regular expression pattern.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string IsRegex(string regex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">regex</span></td>
+        <td><p>The pattern to use to match the string argument value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_It_IsRegex_System_String__examples">Examples</h5>
+  
+<p>The following example shows how to expect a call to a method where the string argument matches the given regular expression:</p>
+<pre><code class="lang-csharp">mock.Setup(x =&gt; x.Check(It.IsRegex(&quot;[a-z]+&quot;))).Returns(1);
+</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/stakx/moq4/blob/master/docs/apidoc/Moq.It.IsRegex-options.example.md/#L2">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/It.cs/#L193">View Source</a>
+  </span>
+  <a id="Moq_It_IsRegex_" data-uid="Moq.It.IsRegex*"></a>
+  <h4 id="Moq_It_IsRegex_System_String_System_Text_RegularExpressions_RegexOptions_" data-uid="Moq.It.IsRegex(System.String,System.Text.RegularExpressions.RegexOptions)">IsRegex(String, RegexOptions)</h4>
+  <div class="markdown level1 summary"><p>Matches a string argument if it matches the given regular expression pattern.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string IsRegex(string regex, RegexOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">regex</span></td>
+        <td><p>The pattern to use to match the string argument value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.regularexpressions.regexoptions">RegexOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options used to interpret the pattern.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Moq_It_IsRegex_System_String_System_Text_RegularExpressions_RegexOptions__examples">Examples</h5>
+  
+<p>The following example shows how to expect a call to a method where the string argument matches the given regular expression, in a case insensitive way:</p>
+<pre><code class="lang-csharp">mock.Setup(x =&gt; x.Check(It.IsRegex(&quot;[a-z]+&quot;, RegexOptions.IgnoreCase))).Returns(1);
+</code></pre>
+
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/stakx/moq4/new/master/apiSpec/new?filename=Moq_It.md&amp;value=---%0Auid%3A%20Moq.It%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/stakx/moq4/blob/master/src/Moq/It.cs/#L27" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

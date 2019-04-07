@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Moq
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Moq
+   ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="Moq">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Moq">
+  
+  <h1 id="Moq" data-uid="Moq" class="text-break">Namespace Moq
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Moq.Capture.html">Capture</a></h4>
+      <section><p>Allows to create parameter captures in setup expressions.</p>
+</section>
+      <h4><a class="xref" href="Moq.CaptureMatch-1.html">CaptureMatch&lt;T&gt;</a></h4>
+      <section><p>Allows creation custom matchers that can be used on setups to capture parameter values.</p>
+</section>
+      <h4><a class="xref" href="Moq.DefaultValueProvider.html">DefaultValueProvider</a></h4>
+      <section><p><a class="xref" href="Moq.DefaultValueProvider.html">DefaultValueProvider</a> is the abstract base class for default value providers.
+These are responsible for producing e. g. return values when mock methods or properties get invoked unexpectedly.
+In other words, whenever there is no setup that would determine the return value for a particular invocation,
+Moq asks the mock's default value provider to produce a return value.</p>
+</section>
+      <h4><a class="xref" href="Moq.ExpressionCompiler.html">ExpressionCompiler</a></h4>
+      <section><p>An <a class="xref" href="Moq.ExpressionCompiler.html">ExpressionCompiler</a> compiles LINQ expression trees (<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression">Expression</a>) to delegates.
+Whenever Moq needs to compile an expression tree, it uses the instance set up by <a class="xref" href="Moq.ExpressionCompiler.html#Moq_ExpressionCompiler_Instance">Instance</a>.</p>
+</section>
+      <h4><a class="xref" href="Moq.GeneratedReturnsExtensions.html">GeneratedReturnsExtensions</a></h4>
+      <section><p>Defines async extension methods on IReturns.</p>
+</section>
+      <h4><a class="xref" href="Moq.It.html">It</a></h4>
+      <section><p>Allows the specification of a matching condition for an argument in a method invocation,
+rather than a specific argument value. &quot;It&quot; refers to the argument being matched.</p>
+</section>
+      <h4><a class="xref" href="Moq.It.Ref-1.html">It.Ref&lt;TValue&gt;</a></h4>
+      <section><p>Contains matchers for <span class="xref">langword_csharp_ref</span> (C#) / <span class="xref">langword_csharp_ByRef</span> (VB.NET) parameters of type <code data-dev-comment-type="typeparamref" class="typeparamref">TValue</code>.</p>
+</section>
+      <h4><a class="xref" href="Moq.LookupOrFallbackDefaultValueProvider.html">LookupOrFallbackDefaultValueProvider</a></h4>
+      <section><p>Abstract base class for default value providers that look up and delegate to value factory functions for the requested type(s).
+If a request cannot be satisfied by any registered factory, the default value gets produced by a fallback strategy.</p>
+</section>
+      <h4><a class="xref" href="Moq.Match.html">Match</a></h4>
+      <section><p>Allows creating custom value matchers that can be used on setups and verification,
+completely replacing the built-in <a class="xref" href="Moq.It.html">It</a> class with your own argument matching rules.</p>
+</section>
+      <h4><a class="xref" href="Moq.Match-1.html">Match&lt;T&gt;</a></h4>
+      <section><p>Allows creating custom value matchers that can be used on setups and verification,
+completely replacing the built-in <a class="xref" href="Moq.It.html">It</a> class with your own argument matching rules.</p>
+</section>
+      <h4><a class="xref" href="Moq.MatcherAttribute.html">MatcherAttribute</a></h4>
+      <section><p>Marks a method as a matcher, which allows complete replacement
+of the built-in <a class="xref" href="Moq.It.html">It</a> class with your own argument
+matching rules.</p>
+</section>
+      <h4><a class="xref" href="Moq.Mock.html">Mock</a></h4>
+      <section><p>Base class for mocks and static helper class with methods that
+apply to mocked objects, such as <a class="xref" href="Moq.Mock.html#Moq_Mock_Get__1___0_">Get&lt;T&gt;(T)</a> to
+retrieve a <a class="xref" href="Moq.Mock-1.html">Mock&lt;T&gt;</a> from an object instance.</p>
+</section>
+      <h4><a class="xref" href="Moq.Mock-1.html">Mock&lt;T&gt;</a></h4>
+      <section><p>Provides a mock implementation of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</section>
+      <h4><a class="xref" href="Moq.MockException.html">MockException</a></h4>
+      <section><p>Exception thrown by mocks when they are not properly set up,
+when setups are not matched, when verification fails, etc.</p>
+</section>
+      <h4><a class="xref" href="Moq.MockExtensions.html">MockExtensions</a></h4>
+      <section><p>Provides additional methods on mocks.</p>
+</section>
+      <h4><a class="xref" href="Moq.MockFactory.html">MockFactory</a></h4>
+      <section><p>Utility factory class to use to construct multiple
+mocks when consistent verification is
+desired for all of them.</p>
+</section>
+      <h4><a class="xref" href="Moq.MockLegacyExtensions.html">MockLegacyExtensions</a></h4>
+      <section><p>Contains obsolete API members as extension methods so that existing code continues to compile,
+but new code doesn't see them.</p>
+</section>
+      <h4><a class="xref" href="Moq.MockRepository.html">MockRepository</a></h4>
+      <section><p>Utility repository class to use to construct multiple
+mocks when consistent verification is
+desired for all of them.</p>
+</section>
+      <h4><a class="xref" href="Moq.Mocks.html">Mocks</a></h4>
+      <section><p>Allows querying the universe of mocks for those that behave
+according to the LINQ query specification.</p>
+</section>
+      <h4><a class="xref" href="Moq.MockSequence.html">MockSequence</a></h4>
+      <section><p>Helper class to setup a full trace between many mocks</p>
+</section>
+      <h4><a class="xref" href="Moq.MockSequenceHelper.html">MockSequenceHelper</a></h4>
+      <section><p>Contains extension methods that are related to <a class="xref" href="Moq.MockSequence.html">MockSequence</a>.</p>
+</section>
+      <h4><a class="xref" href="Moq.ObsoleteMockExtensions.html">ObsoleteMockExtensions</a></h4>
+      <section><p>Provides additional methods on mocks.</p>
+</section>
+      <h4><a class="xref" href="Moq.ReturnsExtensions.html">ReturnsExtensions</a></h4>
+      <section><p>Defines async extension methods on IReturns.</p>
+</section>
+      <h4><a class="xref" href="Moq.SequenceExtensions.html">SequenceExtensions</a></h4>
+      <section><p>Helper for sequencing return values in the same method.</p>
+</section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="Moq.Times.html">Times</a></h4>
+      <section><p>Defines the number of invocations allowed by a mocked method.</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Moq.IInvocation.html">IInvocation</a></h4>
+      <section><p>Provides information about an invocation of a mock object.</p>
+</section>
+      <h4><a class="xref" href="Moq.IInvocationList.html">IInvocationList</a></h4>
+      <section><p>A list of invocations which have been performed on a mock.</p>
+</section>
+      <h4><a class="xref" href="Moq.IMock-1.html">IMock&lt;T&gt;</a></h4>
+      <section><p>Covariant interface for <a class="xref" href="Moq.Mock-1.html">Mock&lt;T&gt;</a> such that casts between IMock&lt;Employee&gt; to IMock&lt;Person&gt;
+are possible. Only covers the covariant members of <a class="xref" href="Moq.Mock-1.html">Mock&lt;T&gt;</a>.</p>
+</section>
+      <h4><a class="xref" href="Moq.IMocked.html">IMocked</a></h4>
+      <section><p>Implemented by all generated mock object instances.</p>
+</section>
+      <h4><a class="xref" href="Moq.IMocked-1.html">IMocked&lt;T&gt;</a></h4>
+      <section><p>Implemented by all generated mock object instances.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="Moq.DefaultValue.html">DefaultValue</a></h4>
+      <section><p>Determines the way default values are generated
+calculated for loose mocks.</p>
+</section>
+      <h4><a class="xref" href="Moq.MockBehavior.html">MockBehavior</a></h4>
+      <section><p>Options to customize the behavior of the mock.</p>
+</section>
+      <h4><a class="xref" href="Moq.Range.html">Range</a></h4>
+      <section><p>Kind of range to use in a filter specified through
+<a class="xref" href="Moq.It.html#Moq_It_IsInRange__1___0___0_Moq_Range_">IsInRange&lt;TValue&gt;(TValue, TValue, Range)</a>.</p>
+</section>
+      <h4><a class="xref" href="Moq.Switches.html">Switches</a></h4>
+      <section><p>Represents a switch, or a combination of switches, that can be either enabled or disabled.
+When set via <a class="xref" href="Moq.Mock.html#Moq_Mock_Switches">Switches</a> or <a class="xref" href="Moq.MockFactory.html#Moq_MockFactory_Switches">Switches</a>, they determine how a mock will operate.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

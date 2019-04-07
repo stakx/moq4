@@ -1,0 +1,650 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/stakx/Projects/moq4/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Capture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Capture.html",
+          "hash": "4NPETzIFQxsXGRN5T1MWTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.CaptureMatch-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.CaptureMatch-1.html",
+          "hash": "pBjd0wwLpSXfZRlffwjhug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.DefaultValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.DefaultValue.html",
+          "hash": "z63bfIrB0PT20OyTO5gM4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.DefaultValueProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.DefaultValueProvider.html",
+          "hash": "ZISWgLC1b9h+KwVv3BQBuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.ExpressionCompiler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.ExpressionCompiler.html",
+          "hash": "Tq10tDjZS+Vy0bg7pc0Uhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.GeneratedReturnsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.GeneratedReturnsExtensions.html",
+          "hash": "asrOahLHThEpgguvUqxj2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.IInvocation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.IInvocation.html",
+          "hash": "YYggEh8fPKoL2wDzY5E+VQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.IInvocationList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.IInvocationList.html",
+          "hash": "S9sQM9pDdrHrbz1gMBGyPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.IMock-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.IMock-1.html",
+          "hash": "2c6thEDpcyQF5Ifv2dfKPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.IMocked-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.IMocked-1.html",
+          "hash": "9xVWO6kn0v1s+AhzA9KO3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.IMocked.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.IMocked.html",
+          "hash": "GUDYy1wJnGMQ7xw2QyX52w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.It.Ref-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.It.Ref-1.html",
+          "hash": "moh5FJYMlvmo+ZWEYdT/EQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.It.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.It.html",
+          "hash": "b9YDdL3VtA5yXjL6l8KYPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.LookupOrFallbackDefaultValueProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.LookupOrFallbackDefaultValueProvider.html",
+          "hash": "6M1wYfmDYTW79Ih4ePVtEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Match-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Match-1.html",
+          "hash": "ibJBRu+vPdJrD7ZG4QsK7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Match.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Match.html",
+          "hash": "u5Hp6/teaGmzLwD34Ghe9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.MatcherAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.MatcherAttribute.html",
+          "hash": "XE5tiQ1NGWh1XGMW0/CVWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Mock-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Mock-1.html",
+          "hash": "QUkIwy8PSMcY2jc7KgEEFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Mock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Mock.html",
+          "hash": "PvmuN0A9CzWikzgB8NvPSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.MockBehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.MockBehavior.html",
+          "hash": "qCHohQgkW5hxuLZxIeZgSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.MockException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.MockException.html",
+          "hash": "/zEEQZvAJ6zR75+QzYwT9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.MockExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.MockExtensions.html",
+          "hash": "+L6u2fDyAdcCE7H7ThRUAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.MockFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.MockFactory.html",
+          "hash": "s1ZlSvVgC5uxlCMVCN8HCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.MockLegacyExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.MockLegacyExtensions.html",
+          "hash": "2bgaxrN+smpt/MeJjelciQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.MockRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.MockRepository.html",
+          "hash": "sJsv937Wj1aqa3EfLWX1sg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.MockSequence.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.MockSequence.html",
+          "hash": "u9VMsVvZ76sE540zlSqqbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.MockSequenceHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.MockSequenceHelper.html",
+          "hash": "Is2+yfexupLJ6h61HHBaWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Mocks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Mocks.html",
+          "hash": "223tkhSJMegSKqqzGoE97A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.ObsoleteMockExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.ObsoleteMockExtensions.html",
+          "hash": "glNAFo551qIr09lCdWRI7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Protected.IProtectedAsMock-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Protected.IProtectedAsMock-2.html",
+          "hash": "MkXLq09HbQVMp8KDce8LnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Protected.IProtectedMock-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Protected.IProtectedMock-1.html",
+          "hash": "fMhdFM5lbIF3EeZLiNzBQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Protected.ItExpr.Ref-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Protected.ItExpr.Ref-1.html",
+          "hash": "1BnfrcbMqxWl0J8bt/EYog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Protected.ItExpr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Protected.ItExpr.html",
+          "hash": "ntPOWm+8IlryKNmIPHjdZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Protected.ProtectedExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Protected.ProtectedExtension.html",
+          "hash": "rUKvVpglkGDsAYITRJDLXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Protected.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Protected.html",
+          "hash": "lqlW8uZDRTINTdad6eKpRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Range.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Range.html",
+          "hash": "vySYgz8uwDnXat/lYBcevA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.ReturnsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.ReturnsExtensions.html",
+          "hash": "VTw53c17kDKpfcNCLmYwnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.SequenceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.SequenceExtensions.html",
+          "hash": "fwFyKBu/ZYgWaO6ytN55tQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Switches.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Switches.html",
+          "hash": "XlTmWMAUbvwDwP7BRuy/iQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Times.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Times.html",
+          "hash": "K5i7hv9eYYDBSKgRkNKvzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.html",
+          "hash": "htriFYKZUx3rYtNNv6E8qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "Z5BVofPVWxmcdMvLXrAhqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "/XTez6ixT+UpNckKeUL94g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "QNayQrPY3t1h0+xFWpedLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "STIp+inkfGesvbpMoDChzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "quickstart.md",
+      "output": {
+        ".html": {
+          "relative_path": "quickstart.html",
+          "hash": "oqHidAm9oTbxITiuEQtITw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "MY+Fj86Jnn9zeYj/MH+ApQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 75,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
