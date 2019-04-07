@@ -269,6 +269,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Protected.IProtectedAsMock-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Protected.IProtectedAsMock-2.html",
+          "hash": "8IdiETx6YyRxe9x/XzVrPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Moq.Protected.IProtectedMock-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.Protected.IProtectedMock-1.html",
+          "hash": "2oRxJCJK3hgcg5k1/Wp5gA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Moq.Protected.ItExpr.Ref-1.yml",
       "output": {
         ".html": {
@@ -297,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.Protected.MockExtensions.html",
-          "hash": "5Bun86mYKh8qKWSZsKLAfQ=="
+          "hash": "4kIkfulWVz0guTvGHxxkwA=="
         }
       },
       "is_incremental": false,
@@ -309,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.Protected.html",
-          "hash": "f86kPW6CtRrPLSIYZRStWQ=="
+          "hash": "+lwCz3snJJcu5EjfHC6USg=="
         }
       },
       "is_incremental": false,
@@ -381,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "U9nEafRTwAo77RAoKAEknQ=="
+          "hash": "Ru6iz7aMOSn3hf7+Fz6k8w=="
         }
       },
       "is_incremental": false,
@@ -470,6 +494,18 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 66,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -482,18 +518,6 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 64,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 4,
           "skipped_file_count": 0
         }
       }
