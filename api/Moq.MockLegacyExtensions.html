@@ -108,6 +108,7 @@ public static class MockLegacyExtensions</code></pre>
     <pre><code class="lang-csharp hljs">[EditorBrowsable(EditorBrowsableState.Never)]
 [Obsolete(&quot;The new syntax allows you to pass the value in the expression itself, like f =&gt; f.Value = 25.&quot;, true)]
 public static ISetupSetter&lt;T, TProperty&gt; SetupSet&lt;T, TProperty&gt;(this Mock&lt;T&gt; mock, Expression&lt;Func&lt;T, TProperty&gt;&gt; expression, TProperty value)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -188,6 +189,7 @@ public static ISetupSetter&lt;T, TProperty&gt; SetupSet&lt;T, TProperty&gt;(this
     <pre><code class="lang-csharp hljs">[EditorBrowsable(EditorBrowsableState.Never)]
 [Obsolete(&quot;Use the new syntax, which allows you to pass the value in the expression itself, mock.VerifySet(m =&gt; m.Value = 25);&quot;, true)]
 public static void VerifySet&lt;T, TProperty&gt;(this Mock&lt;T&gt; mock, Expression&lt;Func&lt;T, TProperty&gt;&gt; expression, TProperty value)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -253,6 +255,7 @@ public static void VerifySet&lt;T, TProperty&gt;(this Mock&lt;T&gt; mock, Expres
     <pre><code class="lang-csharp hljs">[EditorBrowsable(EditorBrowsableState.Never)]
 [Obsolete(&quot;Use the new syntax, which allows you to pass the value in the expression itself, mock.VerifySet(m =&gt; m.Value = 25, failMessage);&quot;, true)]
 public static void VerifySet&lt;T, TProperty&gt;(this Mock&lt;T&gt; mock, Expression&lt;Func&lt;T, TProperty&gt;&gt; expression, TProperty value, string failMessage)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

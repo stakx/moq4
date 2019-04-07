@@ -107,6 +107,7 @@ to a property setter, regardless of its value.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;Replaced by SetupSet(Action)&quot;)]
 public static ISetupSetter&lt;T, TProperty&gt; SetupSet&lt;T, TProperty&gt;(this Mock&lt;T&gt; mock, Expression&lt;Func&lt;T, TProperty&gt;&gt; expression)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -192,6 +193,7 @@ the latest one wins and is the one that will be executed.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;Replaced by VerifySet(Action)&quot;)]
 public static void VerifySet&lt;T, TProperty&gt;(this Mock&lt;T&gt; mock, Expression&lt;Func&lt;T, TProperty&gt;&gt; expression)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -283,6 +285,7 @@ of the value but only the specified number of times.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;Replaced by  VerifySet(Action, Times)&quot;)]
 public static void VerifySet&lt;T, TProperty&gt;(this Mock&lt;T&gt; mock, Expression&lt;Func&lt;T, TProperty&gt;&gt; expression, Times times)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -387,6 +390,7 @@ error message.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;Replaced by  VerifySet(Action, Times, string)&quot;)]
 public static void VerifySet&lt;T, TProperty&gt;(this Mock&lt;T&gt; mock, Expression&lt;Func&lt;T, TProperty&gt;&gt; expression, Times times, string failMessage)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -496,6 +500,7 @@ error message.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;Replaced by  VerifySet(Action, string)&quot;)]
 public static void VerifySet&lt;T, TProperty&gt;(this Mock&lt;T&gt; mock, Expression&lt;Func&lt;T, TProperty&gt;&gt; expression, string failMessage)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

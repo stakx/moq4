@@ -384,6 +384,7 @@ specified at factory construction time.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Mock&lt;T&gt; Create&lt;T&gt;()
+
     where T : class</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -441,6 +442,7 @@ factory.VerifyAll();</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Mock&lt;T&gt; Create&lt;T&gt;(MockBehavior behavior)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -517,6 +519,7 @@ and with the given constructor arguments for the class.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Mock&lt;T&gt; Create&lt;T&gt;(MockBehavior behavior, params object[] args)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -606,6 +609,7 @@ the given constructor arguments for the class.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Mock&lt;T&gt; Create&lt;T&gt;(params object[] args)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -686,6 +690,7 @@ factory.Verify();</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual Mock&lt;T&gt; CreateMock&lt;T&gt;(MockBehavior behavior, object[] args)
+
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

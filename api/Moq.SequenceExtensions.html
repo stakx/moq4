@@ -243,6 +243,7 @@ public static class SequenceExtensions</code></pre>
     <pre><code class="lang-csharp hljs">[EditorBrowsable(EditorBrowsableState.Never)]
 [Obsolete(&quot;Please use instance method Mock&lt;T&gt;.SetupSequence instead.&quot;)]
 public static ISetupSequentialAction SetupSequence&lt;TMock&gt;(this Mock&lt;TMock&gt; mock, Expression&lt;Action&lt;TMock&gt;&gt; expression)
+
     where TMock : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -314,6 +315,7 @@ public static ISetupSequentialAction SetupSequence&lt;TMock&gt;(this Mock&lt;TMo
     <pre><code class="lang-csharp hljs">[EditorBrowsable(EditorBrowsableState.Never)]
 [Obsolete(&quot;Please use instance method Mock&lt;T&gt;.SetupSequence instead.&quot;)]
 public static ISetupSequentialResult&lt;TResult&gt; SetupSequence&lt;TMock, TResult&gt;(this Mock&lt;TMock&gt; mock, Expression&lt;Func&lt;TMock, TResult&gt;&gt; expression)
+
     where TMock : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
