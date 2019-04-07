@@ -106,7 +106,6 @@ that behave according to the LINQ query specification.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IQueryable&lt;T&gt; Of&lt;T&gt;()
-
     where T : class</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -156,7 +155,6 @@ that behave according to the LINQ query specification.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IQueryable&lt;T&gt; Of&lt;T&gt;(Expression&lt;Func&lt;T, bool&gt;&gt; specification)
-
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -225,7 +223,6 @@ that behave according to the LINQ query specification.</p>
     <pre><code class="lang-csharp hljs">[EditorBrowsable(EditorBrowsableState.Never)]
 [Obsolete(&quot;Moved to Mock.Of&lt;T&gt;, as it's a single one, so no reason to be on Mocks.&quot;, true)]
 public static T OneOf&lt;T&gt;()
-
     where T : class</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -277,7 +274,6 @@ public static T OneOf&lt;T&gt;()
     <pre><code class="lang-csharp hljs">[EditorBrowsable(EditorBrowsableState.Never)]
 [Obsolete(&quot;Moved to Mock.Of&lt;T&gt;, as it's a single one, so no reason to be on Mocks.&quot;, true)]
 public static T OneOf&lt;T&gt;(Expression&lt;Func&lt;T, bool&gt;&gt; specification)
-
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

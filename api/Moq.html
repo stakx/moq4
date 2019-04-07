@@ -77,6 +77,9 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Moq.AsyncExtensions.html">AsyncExtensions</a></h4>
+      <section><p>Defines async setup extension methods.</p>
+</section>
       <h4><a class="xref" href="Moq.Capture.html">Capture</a></h4>
       <section><p>Allows to create parameter captures in setup expressions.</p>
 </section>
@@ -92,9 +95,6 @@ Moq asks the mock's default value provider to produce a return value.</p>
       <h4><a class="xref" href="Moq.ExpressionCompiler.html">ExpressionCompiler</a></h4>
       <section><p>An <a class="xref" href="Moq.ExpressionCompiler.html">ExpressionCompiler</a> compiles LINQ expression trees (<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.linq.expressions.expression">Expression</a>) to delegates.
 Whenever Moq needs to compile an expression tree, it uses the instance set up by <a class="xref" href="Moq.ExpressionCompiler.html#Moq_ExpressionCompiler_Instance">Instance</a>.</p>
-</section>
-      <h4><a class="xref" href="Moq.GeneratedReturnsExtensions.html">GeneratedReturnsExtensions</a></h4>
-      <section><p>Defines async extension methods on IReturns.</p>
 </section>
       <h4><a class="xref" href="Moq.It.html">It</a></h4>
       <section><p>Allows the specification of a matching condition for an argument in a method invocation,
@@ -136,13 +136,7 @@ when setups are not matched, when verification fails, etc.</p>
       <section><p>Provides additional methods on mocks.</p>
 </section>
       <h4><a class="xref" href="Moq.MockFactory.html">MockFactory</a></h4>
-      <section><p>Utility factory class to use to construct multiple
-mocks when consistent verification is
-desired for all of them.</p>
-</section>
-      <h4><a class="xref" href="Moq.MockLegacyExtensions.html">MockLegacyExtensions</a></h4>
-      <section><p>Contains obsolete API members as extension methods so that existing code continues to compile,
-but new code doesn't see them.</p>
+      <section><p>Obsolete. Use <a class="xref" href="Moq.MockRepository.html">MockRepository</a> instead.</p>
 </section>
       <h4><a class="xref" href="Moq.MockRepository.html">MockRepository</a></h4>
       <section><p>Utility repository class to use to construct multiple
@@ -158,15 +152,6 @@ according to the LINQ query specification.</p>
 </section>
       <h4><a class="xref" href="Moq.MockSequenceHelper.html">MockSequenceHelper</a></h4>
       <section><p>Contains extension methods that are related to <a class="xref" href="Moq.MockSequence.html">MockSequence</a>.</p>
-</section>
-      <h4><a class="xref" href="Moq.ObsoleteMockExtensions.html">ObsoleteMockExtensions</a></h4>
-      <section><p>Provides additional methods on mocks.</p>
-</section>
-      <h4><a class="xref" href="Moq.ReturnsExtensions.html">ReturnsExtensions</a></h4>
-      <section><p>Defines async extension methods on IReturns.</p>
-</section>
-      <h4><a class="xref" href="Moq.SequenceExtensions.html">SequenceExtensions</a></h4>
-      <section><p>Helper for sequencing return values in the same method.</p>
 </section>
     <h3 id="structs">Structs
   </h3>
@@ -206,7 +191,7 @@ calculated for loose mocks.</p>
 </section>
       <h4><a class="xref" href="Moq.Switches.html">Switches</a></h4>
       <section><p>Represents a switch, or a combination of switches, that can be either enabled or disabled.
-When set via <a class="xref" href="Moq.Mock.html#Moq_Mock_Switches">Switches</a> or <a class="xref" href="Moq.MockFactory.html#Moq_MockFactory_Switches">Switches</a>, they determine how a mock will operate.</p>
+When set via <a class="xref" href="Moq.Mock.html#Moq_Mock_Switches">Switches</a> or <a class="xref" href="Moq.MockRepository.html#Moq_MockRepository_Switches">Switches</a>, they determine how a mock will operate.</p>
 </section>
 </article>
           </div>

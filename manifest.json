@@ -5,6 +5,18 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Moq.AsyncExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Moq.AsyncExtensions.html",
+          "hash": "N9QucL6MpopEmFIagexKrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Moq.Capture.yml",
       "output": {
         ".html": {
@@ -33,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.DefaultValue.html",
-          "hash": "z63bfIrB0PT20OyTO5gM4g=="
+          "hash": "d1uV7eNh8WUkXQAbiPsJxg=="
         }
       },
       "is_incremental": false,
@@ -57,19 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.ExpressionCompiler.html",
-          "hash": "T9DQofTglzz27LqLOKwQ/Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Moq.GeneratedReturnsExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Moq.GeneratedReturnsExtensions.html",
-          "hash": "WOSlE6A5RnmKhN9J2gL7uw=="
+          "hash": "Tq10tDjZS+Vy0bg7pc0Uhw=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.IMock-1.html",
-          "hash": "zvgTtgBTN8DtsuTe4ypI4g=="
+          "hash": "2c6thEDpcyQF5Ifv2dfKPg=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.It.html",
-          "hash": "KbT81tB6gcPLolFX9IXMtQ=="
+          "hash": "Ix67vCrzfeMF+bRu/RpYVQ=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.LookupOrFallbackDefaultValueProvider.html",
-          "hash": "C5+BI/uBhcst+vm96F7pUA=="
+          "hash": "6M1wYfmDYTW79Ih4ePVtEQ=="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.Mock-1.html",
-          "hash": "bhwc35tnNwm0BSprNY+w2Q=="
+          "hash": "nE85caQ5xnjdJ5U457I3OA=="
         }
       },
       "is_incremental": false,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.Mock.html",
-          "hash": "M23X1mWjmYcTQd9w1mTRig=="
+          "hash": "PvmuN0A9CzWikzgB8NvPSA=="
         }
       },
       "is_incremental": false,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.MockExtensions.html",
-          "hash": "+L6u2fDyAdcCE7H7ThRUAw=="
+          "hash": "ML8NcKJMy2b0/QIrKXELsw=="
         }
       },
       "is_incremental": false,
@@ -273,19 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.MockFactory.html",
-          "hash": "tJLk2m2DahtThG32med/4A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Moq.MockLegacyExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Moq.MockLegacyExtensions.html",
-          "hash": "4mlSMlueCvei4QoF7E71zQ=="
+          "hash": "8G6Ucot+fIf6AW413zGCkg=="
         }
       },
       "is_incremental": false,
@@ -297,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.MockRepository.html",
-          "hash": "kivJVQrs4PO4+Nvzig5czg=="
+          "hash": "yfeTjTFf/7N2zMpXJUOJfQ=="
         }
       },
       "is_incremental": false,
@@ -321,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.MockSequenceHelper.html",
-          "hash": "ndrRFjOF5R/dukrFJXINcw=="
+          "hash": "Is2+yfexupLJ6h61HHBaWg=="
         }
       },
       "is_incremental": false,
@@ -333,19 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.Mocks.html",
-          "hash": "+B9jqvtl/QXcR3+RgXQGlw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Moq.ObsoleteMockExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Moq.ObsoleteMockExtensions.html",
-          "hash": "0Ag8Sg0Ej/q5QbMn6UOaFw=="
+          "hash": "223tkhSJMegSKqqzGoE97A=="
         }
       },
       "is_incremental": false,
@@ -369,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.Protected.IProtectedMock-1.html",
-          "hash": "59t7dfdCgXgqI+16E0wzFg=="
+          "hash": "fMhdFM5lbIF3EeZLiNzBQQ=="
         }
       },
       "is_incremental": false,
@@ -393,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.Protected.ItExpr.html",
-          "hash": "Yu9SHlpFdDtjoDCjUM8zAQ=="
+          "hash": "ntPOWm+8IlryKNmIPHjdZg=="
         }
       },
       "is_incremental": false,
@@ -401,11 +377,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Moq.Protected.ProtectedExtension.yml",
+      "source_relative_path": "api/Moq.Protected.MockExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Moq.Protected.ProtectedExtension.html",
-          "hash": "XOMaeX0cHT/p3haNK8P9vg=="
+          "relative_path": "api/Moq.Protected.MockExtensions.html",
+          "hash": "yOC1YZc/cewFnnnPQh0ABw=="
         }
       },
       "is_incremental": false,
@@ -417,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.Protected.html",
-          "hash": "lqlW8uZDRTINTdad6eKpRQ=="
+          "hash": "+lwCz3snJJcu5EjfHC6USg=="
         }
       },
       "is_incremental": false,
@@ -437,35 +413,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Moq.ReturnsExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Moq.ReturnsExtensions.html",
-          "hash": "AYgZyMiDt1Hijj7Oh3bJSg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Moq.SequenceExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Moq.SequenceExtensions.html",
-          "hash": "H6HGP8ClxM0CLZa/gfZ1qA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Moq.Switches.yml",
       "output": {
         ".html": {
           "relative_path": "api/Moq.Switches.html",
-          "hash": "XlTmWMAUbvwDwP7BRuy/iQ=="
+          "hash": "LT+0PiDw28vz6WibiLu2gA=="
         }
       },
       "is_incremental": false,
@@ -489,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Moq.html",
-          "hash": "htriFYKZUx3rYtNNv6E8qw=="
+          "hash": "sZXC5X5Nzk3lym1zPcZy/w=="
         }
       },
       "is_incremental": false,
@@ -513,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "/XTez6ixT+UpNckKeUL94g=="
+          "hash": "Jmp1pJhGD+p3RNQXO7lCFg=="
         }
       },
       "is_incremental": false,
@@ -609,16 +561,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 71,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 4,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 75,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {

@@ -347,7 +347,6 @@ You can opt in or out of certain features via this property.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual Mock&lt;TInterface&gt; As&lt;TInterface&gt;()
-
     where TInterface : class</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -438,7 +437,6 @@ disposable.Setup(d =&gt; d.Dispose()).Verifiable();
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Mock&lt;T&gt; Get&lt;T&gt;(T mocked)
-
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -539,7 +537,6 @@ mock.Setup(req =&gt; req.AppRelativeCurrentExecutionFilePath)
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T Of&lt;T&gt;()
-
     where T : class</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -589,7 +586,6 @@ mock.Setup(req =&gt; req.AppRelativeCurrentExecutionFilePath)
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T Of&lt;T&gt;(Expression&lt;Func&lt;T, bool&gt;&gt; predicate)
-
     where T : class</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
