@@ -347,6 +347,24 @@ namespace Moq
 		}
 
 		/// <summary>
+		///   Verifies all setups that match the given predicate on all mocks created by this factory.
+		/// </summary>
+		/// <param name="recursive">
+		///   Specifies whether recursive verification should be performed.
+		/// </param>
+		/// <param name="predicate">
+		///   Specifies which setups should be verified.
+		/// </param>
+		/// <exception cref="MockException">
+		///   Verification failed due to one or more unmatched setups.
+		/// </exception>
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		public virtual void Verify(bool recursive, Func<ISetup, bool> predicate)
+		{
+			VerifyMocks(verifiable => verifiable.Verify(recursive, predicate));
+		}
+
+		/// <summary>
 		/// Verifies all setups on all mocks created by this factory.
 		/// </summary>
 		/// <seealso cref="Mock.Verify()"/>

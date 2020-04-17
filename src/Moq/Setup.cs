@@ -147,7 +147,7 @@ namespace Moq
 			}
 
 			// optionally verify setups of inner mock (if present and known):
-			if (recursive && this.InnerMock?.TryVerify(predicate, out e) == false && e.IsVerificationError)
+			if (recursive && this.InnerMock?.TryVerify(recursive, predicate, out e) == false && e.IsVerificationError)
 			{
 				error = MockException.FromInnerMockOf(this, e);
 				return false;
@@ -177,6 +177,11 @@ namespace Moq
 		public void Verify(bool recursive = true)
 		{
 			this.Verify(recursive, setup => !setup.IsOverridden && !setup.IsConditional && setup.IsVerifiable);
+		}
+
+		public void Verify(Func<ISetup, bool> predicate)
+		{
+			this.Verify(recursive: true, predicate);
 		}
 
 		public void VerifyAll()

@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
@@ -116,6 +117,30 @@ namespace Moq
 			foreach (var mock in mocks)
 			{
 				mock.Verify();
+			}
+		}
+
+		/// <summary>
+		///   Verifies all setups that match the given predicate.
+		/// </summary>
+		/// <param name="recursive">
+		///   Specifies whether recursive verification should be performed.
+		/// </param>
+		/// <param name="predicate">
+		///   Specifies which setups should be verified.
+		/// </param>
+		/// <param name="mocks">
+		///   The mocks that should be verified.
+		/// </param>
+		/// <exception cref="MockException">
+		///   Verification failed due to one or more unmatched setups.
+		/// </exception>
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		public static void Verify(bool recursive, Func<ISetup, bool> predicate, params Mock[] mocks)
+		{
+			foreach (var mock in mocks)
+			{
+				mock.Verify(recursive, predicate);
 			}
 		}
 
@@ -267,7 +292,7 @@ namespace Moq
 		/// </example>
 		public void Verify()
 		{
-			this.Verify(setup => !setup.IsOverridden && !setup.IsConditional && setup.IsVerifiable);
+			this.Verify(recursive: true, setup => !setup.IsOverridden && !setup.IsConditional && setup.IsVerifiable);
 		}
 
 		/// <summary>
@@ -292,18 +317,31 @@ namespace Moq
 		/// </example>
 		public void VerifyAll()
 		{
-			this.Verify(setup => !setup.IsOverridden && !setup.IsConditional);
+			this.Verify(recursive: true, setup => !setup.IsOverridden && !setup.IsConditional);
 		}
 
-		private void Verify(Func<ISetup, bool> predicate)
+		/// <summary>
+		///   Verifies all setups that match the given predicate.
+		/// </summary>
+		/// <param name="recursive">
+		///   Specifies whether recursive verification should be performed.
+		/// </param>
+		/// <param name="predicate">
+		///   Specifies which setups should be verified.
+		/// </param>
+		/// <exception cref="MockException">
+		///   Verification failed due to one or more unmatched setups.
+		/// </exception>
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		public void Verify(bool recursive, Func<ISetup, bool> predicate)
 		{
-			if (!this.TryVerify(predicate, out var error) && error.IsVerificationError)
+			if (!this.TryVerify(recursive, predicate, out var error) && error.IsVerificationError)
 			{
 				throw error;
 			}
 		}
 
-		internal bool TryVerify(Func<ISetup, bool> predicate, out MockException error)
+		internal bool TryVerify(bool recursive, Func<ISetup, bool> predicate, out MockException error)
 		{
 			foreach (Invocation invocation in this.MutableInvocations)
 			{
@@ -314,7 +352,7 @@ namespace Moq
 
 			foreach (var setup in this.MutableSetups.ToArray(predicate))
 			{
-				if (predicate(setup) && !setup.TryVerify(recursive: true, predicate, out var e) && e.IsVerificationError)
+				if (predicate(setup) && !setup.TryVerify(recursive, predicate, out var e) && e.IsVerificationError)
 				{
 					errors.Add(e);
 				}

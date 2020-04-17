@@ -2,6 +2,7 @@
 // All rights reserved. Licensed under the BSD 3-Clause License; see License.txt.
 
 using System;
+using System.ComponentModel;
 using System.Linq.Expressions;
 
 namespace Moq
@@ -95,7 +96,7 @@ namespace Moq
 		bool WasMatched { get; }
 
 		/// <summary>
-		///   Verifies this setup and optionally all verifiable setups of its inner mock (if present and known).
+		///   Verifies this setup, and optionally all verifiable setups of its inner mock (if present and known).
 		///   <para>
 		///     If <paramref name="recursive"/> is set to <see langword="true"/>,
 		///     the semantics of this method are essentially the same as those of <see cref="Mock.Verify()"/>,
@@ -114,11 +115,30 @@ namespace Moq
 		void Verify(bool recursive = true);
 
 		/// <summary>
-		///   Verifies this setup and all setups of its inner mock (if present and known),
+		///   Verifies this setup, and all setups of its inner mock (if present and known)
+		///   that match the given predicate.
+		///   <para>
+		///     The semantics of this method are essentially the same as those of <see cref="Mock.Verify(bool, Func{ISetup, bool})"/>
+		///     except that this setup (instead of a mock) is used as the starting point for verification,
+		///     and will always be verified itself (even if it does not match the predicate).
+		///   </para>
+		/// </summary>
+		/// <param name="predicate">
+		///   Specifies which setups should be verified during recursive verification.
+		/// </param>
+		/// <exception cref="MockException">
+		///   Verification failed due to one or more unmatched setups.
+		/// </exception>
+		[EditorBrowsable(EditorBrowsableState.Advanced)]
+		void Verify(Func<ISetup, bool> predicate);
+
+		/// <summary>
+		///   Verifies this setup, and all setups of its inner mock (if present and known)
 		///   regardless of whether they have been flagged as verifiable.
 		///   <para>
 		///     The semantics of this method are essentially the same as those of <see cref="Mock.VerifyAll()"/>,
-		///     except that this setup (instead of a mock) is used as the starting point for verification.
+		///     except that this setup (instead of a mock) is used as the starting point for verification,
+		///     and will always be verified itself.
 		///   </para>
 		/// </summary>
 		/// <exception cref="MockException">
