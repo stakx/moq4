@@ -315,7 +315,7 @@ namespace Moq
 
 			foreach (var setup in this.MutableSetups.ToArray(predicate))
 			{
-				if (predicate(setup) && !setup.TryVerify(recursive: true, predicate, verifiedMocks, out var e) && e.IsVerificationError)
+				if (!setup.TryVerify(recursive: true, predicate, verifiedMocks, out var e) && e.IsVerificationError)
 				{
 					errors.Add(e);
 				}
