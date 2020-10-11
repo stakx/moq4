@@ -258,7 +258,7 @@ namespace Moq
 		/// </example>
 		public void Verify()
 		{
-			this.Verify(setup => !setup.IsOverridden && !setup.IsConditional && setup.IsVerifiable);
+			this.Verify(setup => !setup.IsOverridden && !setup.IsConditional && setup.IsVerifiable, new HashSet<Mock>());
 		}
 
 		/// <summary>
@@ -283,27 +283,16 @@ namespace Moq
 		/// </example>
 		public void VerifyAll()
 		{
-			this.Verify(setup => !setup.IsOverridden && !setup.IsConditional);
+			this.Verify(setup => !setup.IsOverridden && !setup.IsConditional, new HashSet<Mock>());
 		}
 
-		private void Verify(Func<ISetup, bool> predicate)
-		{
-			var verifiedMocks = new HashSet<Mock>();
-
-			if (!this.TryVerify(predicate, verifiedMocks, out var error) && error.IsVerificationError)
-			{
-				throw error;
-			}
-		}
-
-		internal bool TryVerify(Func<ISetup, bool> predicate, HashSet<Mock> verifiedMocks, out MockException error)
+		internal void Verify(Func<ISetup, bool> predicate, HashSet<Mock> verifiedMocks)
 		{
 			if (verifiedMocks.Add(this) == false)
 			{
 				// This mock has already been verified; don't verify it again.
 				// (We can end up here e.g. when there are loops in the inner mock object graph.)
-				error = null;
-				return true;
+				return;
 			}
 
 			foreach (Invocation invocation in this.MutableInvocations)
@@ -315,7 +304,11 @@ namespace Moq
 
 			foreach (var setup in this.MutableSetups.ToArray(predicate))
 			{
-				if (!setup.TryVerify(recursive: true, predicate, verifiedMocks, out var e) && e.IsVerificationError)
+				try
+				{
+					setup.Verify(recursive: true, predicate, verifiedMocks);
+				}
+				catch (MockException e) when (e.IsVerificationError)
 				{
 					errors.Add(e);
 				}
@@ -323,15 +316,9 @@ namespace Moq
 
 			if (errors.Count > 0)
 			{
-				error = MockException.Combined(
+				throw MockException.Combined(
 					errors,
 					preamble: string.Format(CultureInfo.CurrentCulture, Resources.VerificationErrorsOfMock, this));
-				return false;
-			}
-			else
-			{
-				error = null;
-				return true;
 			}
 		}
 
